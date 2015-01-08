@@ -5,35 +5,26 @@
 
 */
 
-function Player(name, health, strength, agility, luck, level, damage){
+function Player(name){
   this.name = name;
-  this.health = health;
-  this.strength = strength;
-  this.agility = agility;
-  this.luck = luck;
-  this.level = level;
-  this.damage = damage;
-  this.equipped = true;
+  this.health = 100;
+  this.strength = 1;
+  this.agility = 1;
+  this.luck = 1;
+  this.level = 1;
+  this.damage = 1;
+  this.equipped = {
+    head:null,
+    torso: var DragonBallShirt = new Item(),
+    lefthand:null,
+    righthand:null,
+    legs:var SwordArtOnlineBoxers = new Item(),
+    feet:null
+  };
   var backpack = [];
-  var maxHealth = 100;
+  var maxHealth = 500;
   var abilities = [];
   this.isAlive = true;
-  var headSlot = [];
-  var bodySlot = [];
-  var mainHand = [];
-  var offHand = [];
-  var legSlot = [];
-  var shoeSlot = [];
-
-  // Player EQ helm
-
-  Player.prototype.equipHead = function(){
-    if(item instanceof Armor){
-      if(headSlot = [])
-    }
-  }
-
-  //  Player EQ body
 
   Player.prototype.equipItem = function(slot, item){
     
@@ -98,4 +89,5 @@ Player.prototype.discardItem = function(item){
 
 // Player use ability
 Player.prototype.useAbility = function(ability){
+
 }

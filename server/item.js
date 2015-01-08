@@ -19,12 +19,6 @@ function Equip(slot, strength, agility, luck, damage){
   this.luck = luck; 
   this.damage = damage;
   Item.call(name,description);
-  function Weapon(){
-
-  }
-  function Armor(){
-
-  }
 }
 // Equip will extend the Item class
 Equip.prototype = Object.create(Item.prototype,{
@@ -32,6 +26,15 @@ Equip.prototype = Object.create(Item.prototype,{
     value:Item
   }
 })
+
+
+
+var MunchkinsHelmet = new Item(){
+  this.slot = Player.head
+};
+
+
+
 // Defines the Consumable subclass
 function Consumable(healthbonus){
   this.healthbonus = healthbonus;
