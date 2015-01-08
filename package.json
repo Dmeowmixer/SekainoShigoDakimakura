@@ -1,0 +1,19 @@
+{
+  "name": "GameDev",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:dmeowmixer/pawasteland.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~4.10.7",
+    "jade": "~1.8.2"
+  }
+}
