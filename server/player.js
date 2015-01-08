@@ -23,8 +23,19 @@ function Player(name){
   };
   var backpack = [];
   var maxHealth = 500;
-  var abilities = [];
+  var abilities = {
+    ability1: "Nerd Rage",
+    ability2: "Chibi SharkNado",
+    ability3: "Kaio-Kenx1"
+  };
   this.isAlive = true;
+
+
+
+
+  var NerdRage = function(effect, damage){  
+    this.effect = "Player gains 20 damage at the cost of his dignity";
+  }
 
   Player.prototype.equipItem = function(slot, item){
     
@@ -87,7 +98,21 @@ Player.prototype.discardItem = function(item){
   }
 }
 
-// Player use ability
-Player.prototype.useAbility = function(ability){
 
+
+function Spell (damage, description){
+  this.damage = damage;
+  this.description = description;
+}
+
+var nerdrage = new Spell(effect){
+
+}
+
+var kaiokenx1 = new Spell(){
+
+}
+
+var chibisharknado = new Spell(){
+  
 }
