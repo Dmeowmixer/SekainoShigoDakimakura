@@ -1,4 +1,7 @@
-                                      ------------------   Post apocalyptic adventure(Working title)  -----------------
+to run, in root directory node /scripts/main.js
+
+
+------------------   Sekai no Shigo Dakimakura  -----------------
     Index
       Index
       Game Design
@@ -129,4 +132,3 @@ Themes
           Armor vendor
           Weapon vendor
         Parents
-
