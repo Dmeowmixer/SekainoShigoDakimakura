@@ -1,4 +1,4 @@
-to run, in root directory node /scripts/main.js
+to run, in root directory type gulp
 
 
 ------------------   Sekai no Shigo Dakimakura  -----------------

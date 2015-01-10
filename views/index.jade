@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', type='text/css', href='/styles/styles.css')
+    title After Death of the World Body Pillow
+  body
+    #content
+      #title_screen
+        h1 Sekai no shigo Dakimakura (After the death of the world Body Pillow)
+        .startbutton
+          button.start(type='button') Start Game
+        .creditsbutton
+          button.credits(type='button') Click This!
+    #game_screen
+      #player_window
+        #player_info
+          p#player_name
+          p#player_level
+          p#player_health
+          p#player_exp
+        #player_equipment
+          p#player_head
+          p#player_torso
+          p#player_lefthand
+          p#player_righthand
+          p#player_legs
+          p#player_feet
+      #inventory_window
+      #game_window
+      #text_window
+
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    script(src="/scripts/main.js")
+    script(src="/scripts/Item.js")
+    script(src="/scripts/ConsumableItem.js")
+    script(src="/scripts/EquippableItem.js")
+    script(src="/scripts/Player.js")
