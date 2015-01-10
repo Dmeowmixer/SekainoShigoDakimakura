@@ -137,157 +137,155 @@ paw.items = {
     }
   })(),
 
+
+
   
+  RoronaZorosSendaiKitetsu : (function(){
+    return function(){
+      paw.EquippableItem.call(this,
+        "RoronaZorosSendaiKitetsu",
+        "One Piece Zoros Left Hand Sword",
+        paw.Player.slots.LHAND,
+        3, //str
+        5, //agi
+        10, //luk
+        10 //damage)
+      )
+    };
+  })(),
+
+
+  OkarinsLabCoat : (function(){
+    return function(){
+      paw.EquippableItem.call(this,
+        "OkarinsLabCoat",
+        "Steins Gate Hoouin Kyoumas lab coat",
+        paw.Player.slots.BODY,
+        -10, //str
+        -3, //agi
+        20, //luk,
+        -10 //damage
+      );
+    };
+  })(),
+
+  KiritosSword : (function(){
+    return function (){
+      paw.EquippableItem.call(this,
+        "KiritosSword",
+        "Sword Art Online Kiritos Sword",
+        paw.Player.slots.RHAND,
+        5, //str
+        10, //agi
+        12, //luk
+        20 //damage
+      );
+    };
+  })(),
+
+  SaiyansArmor : (function(){
+    return function (){
+      paw.EquippableItem.call(this,
+        "SaiyansArmor",
+        "Armor Stolen From Saiyans Ship",
+        paw.Player.slots.BODY,
+        10, //str
+        12, //agi
+        null, //luk
+        5 //damage
+      );
+    };
+  })(),
+
+  MadeInChinaShoes : (function(){
+    return function(){
+      paw.EquippableItem.call(this,
+        "MadeInChinaShoes",
+        "$1 Shoes from Chinatown",
+        paw.Player.slots.FEET,
+        Math.Floor(Math.Random()*2), //str
+        Math.Floor(Math.Random()*3), //agi
+        null, //luk
+        null //damage
+      );
+    };
+  })(),
+
+  ChinatownShirt : (function(){
+    return function(){
+      paw.EquippableItem.call(this,
+        "ChinatownShirt",
+        "10 for $20 Shirts",
+        paw.Player.slots.BODY,
+        Math.Floor(Math.Random()*3), //str
+        Math.Floor(Math.Random()*3), //agi
+        Math.Floor(Math.Random()*3), //luk
+        null //damage
+      );
+    };
+  })(),
+
+  ChristmasSweater : (function(){
+    return function(){
+      paw.EquippableItem.call(this,
+        "ChristmasSweater",
+        "That Ugly Sweater Someone Gave you for Christmas",
+        paw.Player.slots.BODY,
+        -1, //str
+        1, //agi
+        -10,//luk
+        10//damage
+      );
+    };
+  })(),
 
 
 
+  NikeAirJordans : (function(){
+    return function(){
+      paw.EquippableItem.call(this,
+        "NikeAirJordans",
+        "Some Sick Nikes",
+        paw.Player.slots.FEET,
+        null, //str,
+        0, //agi,
+        0, //luk
+        null
+      );
+    };
+  })(),
 
+  MunchkinsHelmet : (function () {
+    return function () {
+      paw.EquippableItem.call(this,
+        "MunchkinsHelmet",
+        "Head Bucket for Munchkins",
+        paw.Player.slots.HEAD,
+        null,//str
+        5, //agi
+        3, //luk
+        0 //damage
+      );
+    };
+  })(),
+
+  HolyGrail : (function () {
+    return function (){
+      paw.EquippableItem.call(this,
+        "HolyGrail",
+        "A Grail that is Holy",
+        paw.Player.slots.HEAD,
+        10,
+        10,
+        10,
+        10
+      );
+    };
+  })()
 }
-  // RoronaZorosSendaiKitetsu : (function(){
-  //   return function(){
-  //     paw.EquippableItem.call(this,
-  //       "RoronaZorosSendaiKitetsu",
-  //       "One Piece Zoros Left Hand Sword",
-  //       paw.Player.slots.LHAND,
-  //       3, //str
-  //       5, //agi
-  //       10, //luk
-  //       10 //damage
-  //     );
-  //   };
-  // })(),
 
 
 
-
-
-  // OkarinsLabCoat : (function(){
-  //   return function(){
-  //     paw.EquippableItem.call(this,
-  //       "OkarinsLabCoat",
-  //       "Steins Gate Hoouin Kyoumas lab coat",
-  //       paw.Player.slots.BODY,
-  //       -10, //str
-  //       -3, //agi
-  //       20, //luk,
-  //       -10 //damage
-  //     );
-  //   };
-  // })(),
-
-  // KiritosSword : (function(){
-  //   return function (){
-  //     paw.EquippableItem.call(this,
-  //       "KiritosSword",
-  //       "Sword Art Online Kiritos Sword",
-  //       paw.Player.slots.RHAND,
-  //       5, //str
-  //       10, //agi
-  //       12, //luk
-  //       20 //damage
-  //     );
-  //   };
-  // })(),
-
-  // SaiyansArmor : (function(){
-  //   return function (){
-  //     paw.EquippableItem.call(this,
-  //       "SaiyansArmor",
-  //       "Armor Stolen From Saiyans Ship",
-  //       paw.Player.slots.BODY,
-  //       10, //str
-  //       12, //agi
-  //       null, //luk
-  //       5 //damage
-  //     );
-  //   };
-  // })(),
-
-  // MadeInChinaShoes : (function(){
-  //   return function(){
-  //     paw.EquippableItem.call(this,
-  //       "MadeInChinaShoes",
-  //       "$1 Shoes from Chinatown",
-  //       paw.Player.slots.FEET,
-  //       Math.Floor(Math.Random()*2), //str
-  //       Math.Floor(Math.Random()*3), //agi
-  //       null, //luk
-  //       null //damage
-  //     );
-  //   };
-  // })(),
-
-  // ChinatownShirt : (function(){
-  //   return function(){
-  //     paw.EquippableItem.call(this,
-  //       "ChinatownShirt",
-  //       "10 for $20 Shirts",
-  //       paw.Player.slots.BODY,
-  //       Math.Floor(Math.Random()*3), //str
-  //       Math.Floor(Math.Random()*3), //agi
-  //       Math.Floor(Math.Random()*3), //luk
-  //       null //damage
-  //     );
-  //   };
-  // })(),
-
-  // ChristmasSweater : (function(){
-  //   return function(){
-  //     paw.EquippableItem.call(this,
-  //       "ChristmasSweater",
-  //       "That Ugly Sweater Someone Gave you for Christmas",
-  //       paw.Player.slots.BODY,
-  //       -1, //str
-  //       1, //agi
-  //       -10,//luk
-  //       10//damage
-  //     );
-  //   };
-  // })(),
-
-
-
-  // NikeAirJordans : (function(){
-  //   return function(){
-  //     paw.EquippableItem.call(this,
-  //       "NikeAirJordans",
-  //       "Some Sick Nikes",
-  //       paw.Player.slots.FEET,
-  //       null, //str,
-  //       0, //agi,
-  //       0, //luk
-  //       null
-  //     );
-  //   };
-  // })(),
-
-  // MunchkinsHelmet : (function () {
-  //   return function () {
-  //     paw.EquippableItem.call(this,
-  //       "MunchkinsHelmet",
-  //       "Head Bucket for Munchkins",
-  //       paw.Player.slots.HEAD,
-  //       null,//str
-  //       5, //agi
-  //       3, //luk
-  //       0 //damage
-  //     );
-  //   };
-  // })(),
-
-  // HolyGrail : (function () {
-  //   return function (){
-  //     paw.EquippableItem.call(this,
-  //       "HolyGrail",
-  //       "A Grail that is Holy",
-  //       paw.Player.slots.HEAD,
-  //       10,
-  //       10,
-  //       10,
-  //       10
-  //     );
-  //   };
-  // })()
 
 
 

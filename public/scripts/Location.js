@@ -1,4 +1,4 @@
-Paw.Location = (function(){
+paw.Location = (function(){
   
   /*
 

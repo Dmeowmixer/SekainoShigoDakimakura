@@ -24,4 +24,13 @@ paw.NPC = (function() {
     }
   });
   return NPC;
-})
+
+})();
+
+paw.enemies = {
+  
+  
+  
+}
+
+
