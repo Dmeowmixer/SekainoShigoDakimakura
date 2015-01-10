@@ -104,8 +104,10 @@ paw.Player = (function (){
     BODY : "BODY",
     RHAND : "RHAND",
     LHAND : "LHAND",
+    ANYHAND : "ANYHAND",
+    BOTHHANDS : "BOTHHANDS",
     LEGS : "LEGS",
-    FEET : "FEET"
+    FEET : "FEET"   
   }
   return Player;
 })();
