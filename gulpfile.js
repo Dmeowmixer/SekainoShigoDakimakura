@@ -15,9 +15,9 @@ gulp.task('watch_styles', function (){
 });
 
 gulp.task('express', function(){
-  var app = express;
-  app.use(require('connect-livereload')({port: 35729}));
-  app.listen(4000);
+  // var app = express;
+  express.use(require('connect-livereload')({port: 35729}));
+  express.listen(4000);
 });
 
 function notifyLiveReload(event){
