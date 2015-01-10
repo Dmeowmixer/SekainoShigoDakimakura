@@ -1,9 +1,18 @@
 body {
 	#content {
-		background-color: #FFF;
-		#title_screen{
-			.startbutton{
+		position: fixed;
+		display: block;
+		top: 40%;
+		width: 100%;
+		margin: 0 auto;
+	  	text-align: center;
+	  	#title_screen {
+			.startbutton {
+				border-radius: 25px;
 			}
+	  	}
+		#game_screen {
+			visibility: hidden;
 		}
 	}
 }

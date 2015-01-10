@@ -1,2 +1,11 @@
 body #content {
-  background-color: #FFF; }
+  position: fixed;
+  display: block;
+  top: 40%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; }
+  body #content #title_screen .startbutton {
+    border-radius: 25px; }
+  body #content #game_screen {
+    visibility: hidden; }
