@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light:400.css);
+@import url(http://fonts.googleapis.com/css?family=Rock+Salt:400.css);
 body #content {
   position: fixed;
   display: block;
@@ -5,7 +7,20 @@ body #content {
   width: 100%;
   margin: 0 auto;
   text-align: center; }
-  body #content #title_screen .startbutton {
-    border-radius: 25px; }
+  body #content #title_screen h1 {
+    display: none;
+    font-size: 2em;
+    font-family: 'Rock Salt', cursive; }
+  body #content #title_screen button {
+    background-color: #000;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin: 5px auto;
+    width: 10%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px #d3d3d3;
+    font-weight: bold; }
   body #content #game_screen {
     visibility: hidden; }
