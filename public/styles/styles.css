@@ -24,30 +24,29 @@ body #content {
     font-weight: bold; }
   body #content #game_screen {
     visibility: hidden; }
-body #game_screen #player_window #player_info #player_name {
-  display: inline-block; }
-body #game_screen #player_window #player_info #player_level {
-  display: inline-block;
-  padding-left: 6%; }
-body #game_screen #player_window #player_info #player_health {
-  padding-left: 1%; }
-body #game_screen #player_window #player_info #player_exp {
-  padding-left: 1%; }
-body #game_screen #player_window #player_equipment #player_head {
-  padding-left: 6%; }
-body #game_screen #player_window #player_equipment #player_torso {
-  padding-top: 3%;
-  padding-left: 8%;
-  padding-bottom: 4%; }
-body #game_screen #player_window #player_equipment #player_righthand {
-  display: inline;
-  padding-right: 6%; }
-body #game_screen #player_window #player_equipment #player_lefthand {
-  padding-right: 6%;
-  display: inline; }
-body #game_screen #player_window #player_equipment #player_legs {
-  padding-top: 3%; }
-body #game_screen #player_window #player_equipment #player_feet {
-  padding-top: 2%;
-  padding-left: 3%; }
-
+    body #content #game_screen #player_window #player_info #_name {
+      display: inline-block; }
+    body #content #game_screen #player_window #player_info #_level {
+      display: inline-block;
+      padding-left: 6%; }
+    body #content #game_screen #player_window #player_info #_health {
+      padding-left: 1%; }
+    body #content #game_screen #player_window #player_info #_exp {
+      padding-left: 1%; }
+    body #content #game_screen #player_window #player_equipment #_head {
+      padding-left: 6%; }
+    body #content #game_screen #player_window #player_equipment #_torso {
+      padding-top: 3%;
+      padding-left: 8%;
+      padding-bottom: 4%; }
+    body #content #game_screen #player_window #player_equipment #_righthand {
+      display: inline;
+      padding-right: 6%; }
+    body #content #game_screen #player_window #player_equipment #_lefthand {
+      padding-right: 6%;
+      display: inline; }
+    body #content #game_screen #player_window #player_equipment #_legs {
+      padding-top: 3%; }
+    body #content #game_screen #player_window #player_equipment #_feet {
+      padding-top: 2%;
+      padding-left: 3%; }
