@@ -2,7 +2,7 @@ $(function(){
   var player_window = $('#player_window');
   $('#_name').text("Jon");
 
-  $('#_level').text("23");
+  $('#_level').text("Lvl : 23");
   
   $('#_health').text($('no hp is dedz')); 
   // var health = document.getElementById("health");
@@ -24,7 +24,6 @@ $(function(){
   $('#_legs').text("Nothing");
 
   $('#_feet').text("Kitten Mittens");
-
 
 
 });

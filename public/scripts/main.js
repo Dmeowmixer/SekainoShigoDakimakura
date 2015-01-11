@@ -15,5 +15,4 @@ $(document).ready(function (){
   	$('#title_screen').hide();
   	$('#game_screen').css('visibility', 'visible');
   });
-
 });
