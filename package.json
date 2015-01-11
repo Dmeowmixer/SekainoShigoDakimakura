@@ -19,5 +19,8 @@
     "connect-livereload": "~0.5.2",
     "tiny-lr": "~0.1.4",
     "gulp": "~3.8.10"
+  },
+  "devDependencies": {
+    "gulp-plumber": "~0.6.6"
   }
 }
