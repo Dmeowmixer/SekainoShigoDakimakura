@@ -52,3 +52,5 @@ body #content #game_screen {
   body #content #game_screen #player_window #player_equipment #_feet {
     padding-top: 2%;
     padding-left: 6%; }
+  body #content #game_screen #player_window #game_window {
+    padding-left: 60%; }
