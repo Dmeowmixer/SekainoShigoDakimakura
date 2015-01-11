@@ -66,6 +66,20 @@ paw.items = {
     };
   })(),
 
+  GenericSword : (function(){
+    return function(){
+      paw.EquippableItem.call(this,
+        "GenericSword",
+        "Bought off Ebay",
+        paw.Player.slots.ANYHAND,
+        Math.floor(Math.random()*5),
+        Math.floor(Math.random()*5),
+        Math.floor(Math.random()*5),
+        Math.floor(Math.random()*5)
+      )
+    }
+  })(),
+
   GohansDragonBallHat : (function(){
     return function(){
       paw.EquippableItem.call(this,
@@ -99,8 +113,8 @@ paw.items = {
       paw.EquippableItem.call(this,
         "GokusPowerPole",
         "Gokus Extending Pole",
-        paw.Player.slots.RHAND,
-        paw.Player.slots.LHAND,
+        paw.Player.slots.BOTHHANDS,
+
         5, //str,
         5, //agi,
         null, //luk,
