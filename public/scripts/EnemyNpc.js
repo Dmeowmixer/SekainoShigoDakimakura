@@ -7,11 +7,11 @@
     paw.NPC.call(this, name, health, level, expreward, loot)
   }
   // Enemy is a extension of NPC
-  // Enemy.prototype = Object.create(paw.NPC.prototype,{
-  //   constructor:{
-  //     value: paw.NPC
-  //   } 
-  // });
+  Enemy.prototype = Object.create(paw.NPC.prototype,{
+    constructor:{
+      value: paw.NPC
+    } 
+  });
   return Enemy;
  })();
 
