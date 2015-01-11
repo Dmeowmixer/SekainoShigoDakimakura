@@ -12,6 +12,7 @@ $(document).ready(function (){
 
   //Start Button hides title_screen and show game_screen
   $('.startbutton').click(function() {
+    
   	$('#title_screen').hide();
   	$('#game_screen').css('visibility', 'visible');
   });

@@ -1,3 +1,5 @@
+ paw.Enemy = (function(){
+
  // Defines the enemy subclass
   function Enemy(name, health, level, expreward, loot, damage, abilities){
     this.damage = damage;
@@ -5,12 +7,13 @@
     paw.NPC.call(this, name, health, level, expreward, loot)
   }
   // Enemy is a extension of NPC
-  Enemy.prototype = Object.create(NPC.prototype,{
-    constructor:{
-      value:NPC
-    }
-  });
-  return NPC;
+  // Enemy.prototype = Object.create(paw.NPC.prototype,{
+  //   constructor:{
+  //     value: paw.NPC
+  //   } 
+  // });
+  return Enemy;
+ })();
 
 paw.enemies = {
 
