@@ -12,5 +12,6 @@ paw.NPC = (function() {
     this.expreward = expreward;
     this.loot = loot;
   }
+  return NPC;
 })();
  

@@ -2,84 +2,88 @@
 @import "http://fonts.googleapis.com/css?family=Rock+Salt:400.css";
 
 body {
-	#content {
-		position: fixed;
-		display: block;
-		top: 40%;
-		width: 100%;
-		margin: 0 auto;
-	  text-align: center;
-	  	#title_screen {
-        h1 {
-          display: none;
-          font-size: 2em;
-          // font-family: 'Shadows Into Light', cursive;
-          font-family: 'Rock Salt', cursive;
+  	#content {
+        #title_screen {
+  	      text-align: center;
+          position: fixed;
+          display: block;
+          top: 40%;
+          width: 100%;
+          margin: 0 auto;
+          h1 {
+            display: none;
+            font-size: 2em;
+            // font-family: 'Shadows Into Light', cursive;
+            font-family: 'Rock Salt', cursive;
+          }
+    			button {
+    				background-color: #000;
+    				color: #FFF;
+    				text-transform: uppercase;
+    				padding: 10px 15px;
+        		margin: 5px auto;
+        		width: 10%;
+        		border: none;
+        		border-radius: 5px;
+        		box-shadow: 3px 3px #d3d3d3;
+        		font-weight: bold;
+    			}
+  	  	}
+  		#game_screen {
+  			visibility: hidden;
+        #player_window{
+          #player_info{
+            #_name{
+              display:inline-block;
+            }
+            #_level{
+              display:inline-block;
+              padding-left:15%;
+            }
+            #_health{
+              padding-left:1%;
+            }
+            #_exp{
+              padding-left:1%;
+            }
+            #player_health{
+              padding-left:5%;
+            }
+            #player_exp{
+              padding-left:5%;
+              padding-bottom:1%;
+            }
+          }
+          #player_equipment{
+            #_head{
+              padding-left:6%;  
+            }
+            #_torso{
+              padding-top:3%;
+              padding-left:10%;
+              padding-bottom:4%;
+            }
+            #_righthand{
+              display:inline;
+              padding-right:6%;
+              padding-left:5%;
+            }
+            #_lefthand{
+              padding-right:6%;
+              display:inline;
+              
+            }
+            #_legs{
+              padding-top:3%;
+            }
+            #_feet{
+              padding-top:2%;
+              padding-left:6%;
+            }
+          }
+        #inventory_window{
         }
-  			button {
-  				background-color: #000;
-  				color: #FFF;
-  				text-transform: uppercase;
-  				padding: 10px 15px;
-      		margin: 5px auto;
-      		width: 10%;
-      		border: none;
-      		border-radius: 5px;
-      		box-shadow: 3px 3px #d3d3d3;
-      		font-weight: bold;
-  			}
-	  	}
-		#game_screen {
-			visibility: hidden;
-		}
-	}
-  #game_screen {
-    #player_window{
-      #player_info{
-        #player_name{
-          display:inline-block;
-        }
-        #player_level{
-          display:inline-block;
-          padding-left:15%;
-        }
-        #player_health{
-          padding-left:5%;
-        }
-        #player_exp{
-          padding-left:5%;
-          padding-bottom:1%;
-        }
-      }
-      #player_equipment{
-        #player_head{
-          padding-left:6%;  
-        }
-        #player_torso{
-          padding-top:3%;
-          padding-left:10%;
-          padding-bottom:4%;
-        }
-        #player_righthand{
-          display:inline;
-          padding-right:6%;
-          padding-left:5%;
-        }
-        #player_lefthand{
-          padding-right:6%;
-          display:inline;
-          
-        }
-        #player_legs{
-          padding-top:3%;
-        }
-        #player_feet{
-          padding-top:2%;
-          padding-left:6%;
-        }
-      }
-      #inventory_window{
-      }
-    }
+  		}
+  	}
   }
 }
