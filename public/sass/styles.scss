@@ -32,47 +32,57 @@ body {
 		#game_screen {
 			visibility: hidden;
       #player_window{
-      #player_info{
-        #_name{
-          display:inline-block;
+        #player_info{
+          #_name{
+            display:inline-block;
+          }
+          #_level{
+            display:inline-block;
+            padding-left:15%;
+          }
+          #_health{
+            padding-left:1%;
+          }
+          #_exp{
+            padding-left:1%;
+          }
+          #player_health{
+            padding-left:5%;
+          }
+          #player_exp{
+            padding-left:5%;
+            padding-bottom:1%;
+          }
         }
-        #_level{
-          display:inline-block;
-          padding-left:6%;
+        #player_equipment{
+          #_head{
+            padding-left:6%;  
+          }
+          #_torso{
+            padding-top:3%;
+            padding-left:10%;
+            padding-bottom:4%;
+          }
+          #_righthand{
+            display:inline;
+            padding-right:6%;
+            padding-left:5%;
+          }
+          #_lefthand{
+            padding-right:6%;
+            display:inline;
+            
+          }
+          #_legs{
+            padding-top:3%;
+          }
+          #_feet{
+            padding-top:2%;
+            padding-left:6%;
+          }
         }
-        #_health{
-          padding-left:1%;
-        }
-        #_exp{
-          padding-left:1%;
-        }
+      #inventory_window{
       }
-      #player_equipment{
-        #_head{
-          padding-left:6%;  
-        }
-        #_torso{
-          padding-top:3%;
-          padding-left:8%;
-          padding-bottom:4%;
-        }
-        #_righthand{
-          display:inline;
-          padding-right:6%;
-        }
-        #_lefthand{
-          padding-right:6%;
-          display:inline;
-        }
-        #_legs{
-          padding-top:3%;
-        }
-        #_feet{
-          padding-top:2%;
-          padding-left:3%;
-        }
-      }
-    }
 		}
 	}
 }
