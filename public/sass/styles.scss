@@ -6,4 +6,48 @@ body {
 			}
 		}
 	}
+  #game_screen {
+    #player_window{
+      #player_info{
+        #player_name{
+          display:inline-block;
+        }
+        #player_level{
+          display:inline-block;
+          padding-left:6%;
+        }
+        #player_health{
+          padding-left:1%;
+        }
+        #player_exp{
+          padding-left:1%;
+        }
+      }
+      #player_equipment{
+        #player_head{
+          padding-left:6%;  
+        }
+        #player_torso{
+          padding-top:3%;
+          padding-left:8%;
+          padding-bottom:4%;
+        }
+        #player_righthand{
+          display:inline;
+          padding-right:6%;
+        }
+        #player_lefthand{
+          padding-right:6%;
+          display:inline;
+        }
+        #player_legs{
+          padding-top:3%;
+        }
+        #player_feet{
+          padding-top:2%;
+          padding-left:3%;
+        }
+      }
+    }
+  }
 }
