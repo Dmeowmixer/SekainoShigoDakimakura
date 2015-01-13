@@ -17,10 +17,10 @@ paw.Player = (function (){
     this.damage = 1;
     this.equipped = {
       head:null,
-      torso: new paw.items.DragonBallShirt(),
+      torso:null,// torso: new paw.items.DragonBallShirt(),
       lefthand:null,
       righthand:null,
-      legs:new paw.items.SwordArtOnlineBoxers(),
+      legs:null,// legs:new paw.items.SwordArtOnlineBoxers(),
       feet:null
     };
     var backpack = [];

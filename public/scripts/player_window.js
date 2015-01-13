@@ -1,10 +1,10 @@
-$(function(){
+function player_window(){
   var player_window = $('#player_window');
-  $('#_name').text("Jon");
+  $('#_name').text(window.player.name);
 
   $('#_level').text("Lvl : 23");
   
-  $('#_health').text($('no hp is dedz')); 
+  $('#_health').text(window.player.health); 
   // var health = document.getElementById("health");
   // health.value = paw.Player.health.value; 
 
@@ -24,4 +24,5 @@ $(function(){
   $('#_legs').text("Nothing");
 
   $('#_feet').text("Kitten Mittens");
-});
+
+};
