@@ -15,6 +15,24 @@
   return Enemy;
  })();
 
+paw.bossenemies = {
+  // move bosses into this object
+  
+    Vegeta : (function(){
+    return function(){
+      paw.Enemy.call(this,
+        "Vegeta",
+        Math.floor(Math.random()*150) -paw.Player.agility, //hp
+        Math.floor(Math.random()*10),
+        Math.floor(Math.random()*10) + this.level,
+        paw.items.RANDOM_ITEM,
+        5,
+        null
+      )
+    }
+  })()
+
+}
 paw.enemies = {
 
   DonaldDuck : (function (){
@@ -45,33 +63,6 @@ paw.enemies = {
     }
   })(),
 
-  Vegeta : (function(){
-    return function(){
-      paw.Enemy.call(this,
-        "Vegeta",
-        Math.floor(Math.random()*150) -paw.Player.agility, //hp
-        Math.floor(Math.random()*10),
-        Math.floor(Math.random()*10) + this.level,
-        paw.items.RANDOM_ITEM,
-        5,
-        null
-      )
-    }
-  })(),
-
-  Ray : (function(){
-    return function(){
-      paw.Enemy.call(this,
-        "Ray",
-        300 - Player.agility,
-        Math.floor(Math.random()*10),
-        Math.floor(Math.random()*20) + this.level,
-        paw.items.RANDOM_ITEM,
-        5, //damage
-        null
-      )
-    }
-  })(),
 
   Gackt : (function(){
     return function(){

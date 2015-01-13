@@ -1,0 +1,12 @@
+1 - Player will start off in subway_tunnel which will always be visible.
+
+
+2 - after returning to the map screen unknown_tunnel will appear to the player, where he will have to defeat Vegeta.
+
+3 - Subway_entrance will appear to the player, will have to defeat the AkihabaraFanBoy to continue.
+
+4 - house will appear to the player, will have to defeat Gackt.
+
+5 - temple will open to player will have to defeat dakimakura worshipper 3 times.
+
+all other enemies will be random encounters.
