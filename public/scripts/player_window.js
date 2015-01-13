@@ -24,6 +24,4 @@ $(function(){
   $('#_legs').text("Nothing");
 
   $('#_feet').text("Kitten Mittens");
-
-
 });
