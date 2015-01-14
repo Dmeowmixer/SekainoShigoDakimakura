@@ -9,6 +9,7 @@ paw.Player = (function (){
 
   function Player(name){
     this.name = name;
+    this.exp = 0;
     this.health = 100;
     this.strength = 1;
     this.agility = 1;
