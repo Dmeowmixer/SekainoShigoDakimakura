@@ -2,28 +2,33 @@ function player_window(){
   var player_window = $('#player_window');
   $('#_name').text(window.player.name);
 
-  $('#_level').text("Lvl : 23");
+  $('#_level').text(window.player.level);
   
   $('#_health').text(window.player.health); 
   // var health = document.getElementById("health");
   // health.value = paw.Player.health.value; 
 
-  $('#_exp').text($('go lvl u nubz'));
+  $('#_exp').text(window.player.exp);
   // var exp = document.getElementById("exp");
   // exp.value = paw.Player.exp.value;
+  $('#_head').text(window.player.head);
 
+  $('#_torso').text(window.player.body);
 
-  $('#_head').text("Turtle Helmet +3");
+  $('#_lefthand').text(window.player.lefthand);
 
-  $('#_torso').text("Platypus shirt +2");
+  $('#_righthand').text(window.player.righthand);
 
-  $('#_lefthand').text("Fork");
+  $('#_legs').text(window.player.legs);
 
-  $('#_righthand').text("Smelly Socks +4");
+  $('#_feet').text(window.player.feet);
 
-  $('#_legs').text("Nothing");
+  $('#_strength').text(window.player.strength);
 
-  $('#_feet').text("Kitten Mittens");
+  $('#_agility').text(window.player.agility);
 
+  $('#_luck').text(window.player.luck);
 
+  $('#_damage').text(window.player.damage);
+  
 };
