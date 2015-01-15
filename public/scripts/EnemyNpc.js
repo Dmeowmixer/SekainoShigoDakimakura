@@ -4,7 +4,7 @@
   function Enemy(name, health, level, expreward, loot, damage, abilities){
     this.damage = damage;
     this.abilities = abilities;
-    paw.NPC.call(this, name, health, level, expreward, loot)
+    paw.NPC.call(this, name, health, level, expreward, loot);
   }
   // Enemy is a extension of NPC
   Enemy.prototype = Object.create(paw.NPC.prototype,{
@@ -14,7 +14,7 @@
   });
   return Enemy;
  })();
-
+  
 paw.bossenemies = {
   // move bosses into this object
   
@@ -28,11 +28,12 @@ paw.bossenemies = {
         paw.items.RANDOM_ITEM,
         5,
         null
-      )
-    }
+      );
+    };
   })()
 
-}
+};
+
 paw.enemies = {
 
   DonaldDuck : (function (){
@@ -45,8 +46,8 @@ paw.enemies = {
         paw.items.RANDOM_ITEM,
         5,//-paw.Player.strength;
         null
-      )
-    }
+      );
+    };
   })(),
 
   AkihabaraFanBoy : (function(){
@@ -59,8 +60,8 @@ paw.enemies = {
         paw.items.RANDOM_ITEM,
         5,//-paw.Player.strength;
         null
-      )
-    }
+      );
+    };
   })(),
 
 
@@ -73,8 +74,8 @@ paw.enemies = {
         1 + this.level,
         paw.items.RANDOM_ITEM,
         null
-      )
-    }
+      );
+    };
   })(),
 
   Orochimaru : (function(){
@@ -87,8 +88,8 @@ paw.enemies = {
         paw.items.RANDOM_ITEM,
         20 - paw.Players.luck,
         null
-      )
-    }
+      );
+    };
   })(),
 
   Dubstep : (function(){
@@ -100,8 +101,8 @@ paw.enemies = {
         paw.items.RANDOM_ITEM,
         10 - paw.Players.luck,
         null
-      )
-    }
+      );
+    };
   })(),
 
 
@@ -114,8 +115,8 @@ paw.enemies = {
         paw.items.RANDOM_ITEM,
         50-paw.Players.luck,
         null
-      )
-    }
+      );
+    };
   })(),
 
   DakimakuraWorshipper : (function(){
@@ -127,11 +128,11 @@ paw.enemies = {
         paw.items.RANDOM_ITEM,
         Math.floor(Math.random()*60)-paw.Players.luck,
         null
-      )
-    }
+      );
+    };
   })()
 
-}
+};
 
 
 

@@ -8,4 +8,9 @@ $(function(){
   $('#my_house').html('My House');
   $('#temple').html('Temple');
 
+
+
+
 });
+
+

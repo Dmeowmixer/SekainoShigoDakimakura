@@ -1,4 +1,6 @@
                                       ------------------   Post apocalyptic adventure(Working title)  -----------------
+   to run, gulp from root directory
+
     Index
       Index
       Game Design
