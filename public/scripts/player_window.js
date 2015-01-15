@@ -32,4 +32,5 @@ function player_window(){
 
   $('#_damage').text(window.player.damage);
   
-};
+
+}

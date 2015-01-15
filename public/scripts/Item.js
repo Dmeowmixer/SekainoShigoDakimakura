@@ -76,8 +76,8 @@ paw.items = {
         Math.floor(Math.random()*5),
         Math.floor(Math.random()*5),
         Math.floor(Math.random()*5)
-      )
-    }
+      );
+    };
   })(),
 
   GohansDragonBallHat : (function(){
@@ -147,8 +147,8 @@ paw.items = {
         10, //agi
         5, //luk
         -1 // damage
-      )
-    }
+      );
+    };
   })(),
 
 
@@ -164,7 +164,7 @@ paw.items = {
         5, //agi
         10, //luk
         10 //damage)
-      )
+      );
     };
   })(),
 
@@ -296,7 +296,7 @@ paw.items = {
       );
     };
   })()
-}
+};
 
 
 
