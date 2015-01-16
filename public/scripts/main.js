@@ -12,14 +12,16 @@ This will be moved? Battle function
 
 */
 
- function battle(player, enemy){
-    if (paw.player.health <= 0 && paw.enemy.health <= 0){
-      paw.player.health = paw.player.health - paw.enemy.damage;
-      return;
+ function battle(enemy){
+    if (paw.Player.health <= 0 && enemy.health <= 0){
+      var damage_taken = paw.Player.health - enemy.damage_taken;
+      paw.Player.health = damage_taken;
+      return "Playa Has Taken" + damage_taken;
     }
-    if (paw.enemy.health <= 0) {
-      paw.player.exp = paw.player.exp + paw.enemy.expreward;
-      return;
+    if (enemy <= 0) {
+      var exp_gain = paw.Player.exp + enemy;
+      
+      return "Playa has gained" + exp_gain;
     }
   deadplayer();
  }
@@ -62,14 +64,14 @@ function deadplayer(){
       $('#text_window').html($('<p>',{
         class:'dialogue',
         text:'BE A MAN, there is no turning back now.'
-      }))
+      }));
     });
 
     $('#unknown_tunnel').click(function(){
       $('#text_window').html($('<p>', {
         class: "dialogue",
         text: "You have entered the unknown tunnel"
-      }))
+      }));
     });
 
 
@@ -77,21 +79,21 @@ function deadplayer(){
       $('#text_window').html($('<p>', {
         class:"dialogue",
         text:"You have reached the subways entrance"
-      }))
+      }));
     });
     
     $('#my_house').click(function(){
       $('#text_window').html($('<p>',{
         class:"dialogue",
         text:"You somehow have made it home"
-      }))
+      }));
     });
     
     $('#temple').click(function(){
       $('#text_window').html($('<p>', {
         class:"dialogue",
         text:"wha...whAAT ARE THEY DOING TO MY WAIFU!?@$#%"
-      }))
+      }));
     });  
     text_window( );
   });

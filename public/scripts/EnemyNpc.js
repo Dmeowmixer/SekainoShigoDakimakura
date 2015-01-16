@@ -40,8 +40,8 @@ paw.enemies = {
     return function(){
       paw.Enemy.call(this,
         "Donald Duck",
-        Math.floor(Math.random()*500),
-        Math.floor(Math.random()*100),
+        1,
+        1,
         Math.floor(Math.random()*10) + this.level,
         paw.items.RANDOM_ITEM,
         5,//-paw.Player.strength;

@@ -38,11 +38,11 @@ paw.Player = (function (){
 
     var NerdRage = function(effect, damage){  
       this.effect = "Player gains 20 damage at the cost of his dignity";
-    }
+    };
 
     Player.prototype.equipItem = function(slot, item){
       
-    } 
+    };
 
     // Returns players backpack
 
@@ -61,8 +61,8 @@ paw.Player = (function (){
 
     Player.prototype.getAbility = function(){
       return abilities;
-    }
-  };
+    };
+  }
 
   // Defining pick up item function 
 
@@ -74,7 +74,7 @@ paw.Player = (function (){
     else{
       return false;
     }
-  }
+  };
 
   // Defining discard item function
 
