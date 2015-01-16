@@ -12,34 +12,31 @@ html
         .creditsbutton
           button.credits(type='button') Click This!
       #game_screen
-        #player_window
-          #player_info
-            #_name
-            #_level
-            #_health
-            #_exp
-          #player_stats
-            #_strength
-            #_agility
-            #_luck
-            #_damage
-          #player_equipment
-            #_head
-            #_torso
-            #_lefthand
-            #_righthand
-            #_legs
-            #_feet
-        #inventory_window
-        #game_window
-          #subway_tunnel
-          #unknown_tunnel
-          #campsite
-          #subway_entrance
-          #my_house
-          #random_house
-          #temple
-        #text_window
+        .row
+          #player_window.large-4.columns
+            #player_info
+              #_name
+              #_level
+              #_health
+              #_exp
+            #player_equipment
+              #_head
+              #_torso
+              #_lefthand
+              #_righthand
+              #_legs
+              #_feet
+          #game_window.large-8.columns
+            #subway_tunnel
+            #unknown_tunnel
+            #campsite
+            #subway_entrance
+            #my_house
+            #random_house
+            #temple
+        .row
+          #inventory_window.large-4.columns
+          #text_window.large-8.columns
 
     script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
     

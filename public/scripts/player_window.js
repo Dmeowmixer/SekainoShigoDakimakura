@@ -27,8 +27,10 @@ function player_window(){
 
   $('#_agility').text(window.player.agility);
 
+
   $('#_luck').text(window.player.luck);
 
   $('#_damage').text(window.player.damage);
   
+
 }
