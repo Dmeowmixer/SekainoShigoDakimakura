@@ -12,18 +12,12 @@ This will be moved? Battle function
 
 */
 
- function battle(enemy){
-    if (paw.Player.health <= 0 && enemy.health <= 0){
-      var damage_taken = paw.Player.health - enemy.damage_taken;
-      paw.Player.health = damage_taken;
-      return "Playa Has Taken" + damage_taken;
+ function battle(player, enemy){
+    if (player.health > 0 && enemy.health > 0){
+      var damage_taken = player.health - enemy.damage;
+      player.health = player.health - damage_taken;
+      return "Playa Has Taken " + enemy.damage;
     }
-    if (enemy <= 0) {
-      var exp_gain = paw.Player.exp + enemy;
-      
-      return "Playa has gained" + exp_gain;
-    }
-  deadplayer();
  }
 
 
@@ -36,8 +30,8 @@ This will be moved? Battle function
 */
 
 function deadplayer(){
-  
-  
+  console.log('you deaaad');
+    
 }
 
 
@@ -57,6 +51,7 @@ function deadplayer(){
     window.player = new paw.Player("Tonyizzle");
     player_window();
 
+
   	$('#title_screen').hide();
   	$('#game_screen').css('visibility', 'visible');
 
@@ -65,6 +60,11 @@ function deadplayer(){
         class:'dialogue',
         text:'BE A MAN, there is no turning back now.'
       }));
+      // instantiates new enemy onclick
+      window.donaldduck = new paw.enemies.DonaldDuck();
+      // runs battle between player & enemy donald duck
+      console.log(battle(window.player, window.donaldduck));
+
     });
 
     $('#unknown_tunnel').click(function(){
