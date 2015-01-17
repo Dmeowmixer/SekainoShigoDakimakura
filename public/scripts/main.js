@@ -3,22 +3,6 @@ var paw = {};
 $(document).ready(function (){
   // initialize all main things,
 
-/*
-
-
-This will be moved? Battle function
-
-
-
-*/
-
- function battle(player, enemy){
-    if (player.health > 0 && enemy.health > 0){
-      var damage_taken = player.health - enemy.damage;
-      player.health = player.health - damage_taken;
-      return "Playa Has Taken " + enemy.damage;
-    }
- }
 
 
 
@@ -29,10 +13,42 @@ This will be moved? Battle function
 
 */
 
-function deadplayer(){
-  console.log('you deaaad');
-    
+
+
+
+function deadplayer (player){
+  alert('You dead foo');
+  location.reload();
 }
+// checks players health within a function to see if player is still alive
+// runs deadplayer function if player reaches 0 health after enemy attack
+function checkHealth(player){
+  var health = player.health;
+  if (health <= 0){
+    deadplayer();
+  }
+}
+
+/*
+
+
+This will be moved? Battle function
+
+
+
+*/
+ function battle(player, enemy){
+    if (player.health > 0 && enemy.health > 0){
+      var hp_left = player.health - enemy.damage;
+      player.health = hp_left;
+      checkHealth(window.player);
+      return "Playa Has Taken " + enemy.damage + "  damage";
+    }
+    if (player.health <= 0){
+      deadplayer();
+    }
+ }
+
 
 
 
@@ -41,8 +57,8 @@ function deadplayer(){
 
   // Fadein on title
   $('#title').stop(true).fadeIn({
-  	duration: 4000,
-  	queue: false
+    duration: 4000,
+    queue: false
   });
 
   //Start Button hides title_screen and show game_screen
@@ -50,10 +66,12 @@ function deadplayer(){
 
     window.player = new paw.Player("Tonyizzle");
     player_window();
+    var current_health  = window.player.health;
 
 
-  	$('#title_screen').hide();
-  	$('#game_screen').css('visibility', 'visible');
+    $('#title_screen').hide();
+    $('#game_screen').css('visibility', 'visible');
+
 
     $('#subway_tunnel').click(function(){
       $('#text_window').html($('<p>',{
@@ -64,8 +82,16 @@ function deadplayer(){
       window.donaldduck = new paw.enemies.DonaldDuck();
       // runs battle between player & enemy donald duck
       console.log(battle(window.player, window.donaldduck));
-
+      $('#text_window').append($('<p>', {
+        class: 'dialogue',
+        text: battle(window.player, window.donaldduck)
+      }));
+      if (window.player.health != current_health){
+        $('#_health').html(window.player.health);
+        } 
+        return;
     });
+
 
     $('#unknown_tunnel').click(function(){
       $('#text_window').html($('<p>', {
