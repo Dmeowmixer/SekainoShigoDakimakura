@@ -16,16 +16,23 @@ function checkHealth(player, enemy){
   if (health <= 0){
     return deadplayer();
   }
-
   if(enemy.health <= 0){
     var exp_gain = player.exp + enemy.expreward;
     player.exp = exp_gain;
+    appendText('You have defeated an enemizzle');
     return;
   }
 }
 
 
+function appendText(text){
+  $('#text_window').append($('<p>',{
+    class:'dialogue',
+    text:text
+  }));
+}
   /*
+}
 
 
 This will be moved? Battle function
@@ -73,7 +80,7 @@ This will be moved? Battle function
 
 
     $('#subway_tunnel').click(function(){
-      $('#text_window').html($('<p>',{
+      $('#text_window').append($('<p>',{
         class:'dialogue',
         text:'BE A MAN, there is no turning back now.'
       }));
@@ -81,7 +88,7 @@ This will be moved? Battle function
       window.donaldduck = new paw.enemies.DonaldDuck();
 
       $('.reBattle').click(function(){
-        battle(window.player, window.donaldduck);
+        appendText(battle(window.player, window.donaldduck));
         $('#_health').html(player.health);
         return;
       });
@@ -89,10 +96,7 @@ This will be moved? Battle function
 
 
       // runs battle between player & enemy donald duck
-      $('#text_window').append($('<p>', {
-        class: 'dialogue',
-        text: battle(window.player, window.donaldduck)
-      }));
+      appendText(battle(window.player, window.donaldduck));
       if (window.player.health != current_health){
         $('#_health').html(window.player.health);
         }
