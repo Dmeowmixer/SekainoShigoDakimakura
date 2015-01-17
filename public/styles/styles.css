@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light:400.css);
+@import url(http://fonts.googleapis.com/css?family=Press+Start+2P:400.css);
 @import url(http://fonts.googleapis.com/css?family=Rock+Salt:400.css);
 meta.foundation-version {
   font-family: "/5.5.0/"; }
@@ -118,7 +118,7 @@ select {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  max-width: 119.375rem; }
+  max-width: 118.75rem; }
   .row:before, .row:after {
     content: " ";
     display: table; }
@@ -3776,7 +3776,7 @@ ul.pagination {
   @media only screen and (min-width:40.063em) {
     .reveal-modal, dialog {
       width: 80%;
-      max-width: 119.375rem;
+      max-width: 118.75rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
@@ -3792,35 +3792,35 @@ ul.pagination {
   @media only screen and (min-width:40.063em) {
     .reveal-modal.tiny, dialog.tiny {
       width: 30%;
-      max-width: 119.375rem;
+      max-width: 118.75rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
   @media only screen and (min-width:40.063em) {
     .reveal-modal.small, dialog.small {
       width: 40%;
-      max-width: 119.375rem;
+      max-width: 118.75rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
   @media only screen and (min-width:40.063em) {
     .reveal-modal.medium, dialog.medium {
       width: 60%;
-      max-width: 119.375rem;
+      max-width: 118.75rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
   @media only screen and (min-width:40.063em) {
     .reveal-modal.large, dialog.large {
       width: 70%;
-      max-width: 119.375rem;
+      max-width: 118.75rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
   @media only screen and (min-width:40.063em) {
     .reveal-modal.xlarge, dialog.xlarge {
       width: 95%;
-      max-width: 119.375rem;
+      max-width: 118.75rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
@@ -3835,7 +3835,7 @@ ul.pagination {
     @media only screen and (min-width:40.063em) {
       .reveal-modal.full, dialog.full {
         width: 100vw;
-        max-width: 119.375rem;
+        max-width: 118.75rem;
         left: 0;
         right: 0;
         margin: 0 auto; } }
@@ -4673,7 +4673,7 @@ meta.foundation-mq-topbar {
       background: #333333; }
 
   .contain-to-grid .top-bar {
-    max-width: 119.375rem;
+    max-width: 118.75rem;
     margin: 0 auto;
     margin-bottom: 0; }
 
@@ -6052,25 +6052,53 @@ body #content #title_screen {
 body #content #game_screen {
   visibility: hidden; }
   body #content #game_screen #player_window {
-    background-color: blue;
+    border: 3px solid #000;
     width: 20%;
-    height: 700px; }
+    height: 600px;
+    margin: 20px;
+    font-family: 'Press Start 2P', cursive; }
     body #content #game_screen #player_window #player_info {
-      background-color: yellow;
-      padding-top: 10px; }
-    body #content #game_screen #player_window #player_equipment {
-      background-color: purple; }
+      padding-top: 10px;
+      font-size: 13px; }
+      body #content #game_screen #player_window #player_info #_name {
+        display: inline; }
+      body #content #game_screen #player_window #player_info #_level {
+        display: inline;
+        margin-left: 150px; }
+      body #content #game_screen #player_window #player_info #_health {
+        display: block; }
+      body #content #game_screen #player_window #player_info #_exp {
+        display: block; }
+      body #content #game_screen #player_window #player_info #_image {
+        margin-top: 150px;
+        margin-left: 35px; }
+        body #content #game_screen #player_window #player_info #_image img {
+          height: 300px; }
   body #content #game_screen #inventory_window {
-    background-color: pink;
+    font-family: 'Press Start 2P', cursive;
+    border: 3px solid #000;
     width: 20%;
-    height: 290px; }
+    height: 300px;
+    margin: 20px; }
     body #content #game_screen #inventory_window ul {
       list-style-type: none; }
+      body #content #game_screen #inventory_window ul li {
+        font-size: 13px; }
   body #content #game_screen #game_window {
-    width: 80%;
-    height: 700px;
-    background-color: red; }
+    width: 75%;
+    height: 600px;
+    border: 3px solid #000;
+    margin: 20px; }
+    body #content #game_screen #game_window #map img {
+      margin-top: 20px;
+      height: 550px;
+      width: 100%; }
   body #content #game_screen #text_window {
-    width: 80%;
-    height: 290px;
-    background-color: green; }
+    font-family: 'Press Start 2P', cursive;
+    margin: 20px;
+    width: 75%;
+    height: 300px;
+    border: 3px solid #000; }
+    body #content #game_screen #text_window p {
+      margin: 15px;
+      font-size: 13px; }

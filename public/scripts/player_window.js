@@ -2,7 +2,7 @@ function player_window(){
   var player_window = $('#player_window');
   $('#_name').text(window.player.name);
 
-  $('#_level').text(window.player.level);
+  $('#_level').text("Lvl " + window.player.level);
   
   $('#_health').text(window.player.health); 
   // var health = document.getElementById("health");
