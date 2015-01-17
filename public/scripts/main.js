@@ -4,11 +4,55 @@ $(document).ready(function (){
   // initialize all main things,
 
 
+// start
+function deadplayer (player){
+  alert('GG noob, uninstall yo OS you fail @ interwebz');
+  location.reload();
+}
+// checks players health within a function to see if player is still alive
+// runs deadplayer function if player reaches 0 health after enemy attack
+function checkHealth(player, enemy){
+  var health = player.health;
+  if (health <= 0){
+    return deadplayer();
+  }
+  if (enemy.health > 0){
+    $('.reBattle').click(function(){
+      battle(player, enemy);
+      $('#_health').html(player.health);
+      return;
+    });
+  }
+}
+
+
+/*
+
+
+This will be moved? Battle function
+
+
+
+*/
+
+ function battle(player, enemy){
+    if (player.health > 0 && enemy.health > 0){
+      var hp_left = player.health - enemy.damage;
+      player.health = hp_left;
+      checkHealth(player, enemy);
+      return "Playa Has Taken " + enemy.damage + "  damage";
+    }
+    if (player.health <= 0){
+      deadplayer();
+      return;
+    }
+ }
 
 
 
 
 
+// end
 
   // Fadein on title
   $('#title').stop(true).fadeIn({
@@ -36,14 +80,13 @@ $(document).ready(function (){
       // instantiates new enemy onclick
       window.donaldduck = new paw.enemies.DonaldDuck();
       // runs battle between player & enemy donald duck
-      console.log(battle(window.player, window.donaldduck));
       $('#text_window').append($('<p>', {
         class: 'dialogue',
         text: battle(window.player, window.donaldduck)
       }));
       if (window.player.health != current_health){
         $('#_health').html(window.player.health);
-        } 
+        }
         return;
     });
 
