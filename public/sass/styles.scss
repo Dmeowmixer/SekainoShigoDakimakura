@@ -1,6 +1,6 @@
 @import "partials/settings";
 @import "../bower_components/foundation/scss/foundation.scss";
-@import "http://fonts.googleapis.com/css?family=Shadows+Into+Light:400.css";
+@import "http://fonts.googleapis.com/css?family=Press+Start+2P:400.css";
 @import "http://fonts.googleapis.com/css?family=Rock+Salt:400.css";
 
 body {
@@ -14,7 +14,6 @@ body {
       h1 {
         display: none;
         font-size: 2em;
-        // font-family: 'Shadows Into Light', cursive;
         font-family: 'Rock Salt', cursive;
         margin-bottom: 50px;
       }
@@ -34,29 +33,27 @@ body {
     #game_screen {
       visibility: hidden;
       #player_window{
-        background-color: blue;
+        border: 3px solid #000;
         width: 20%;
-        height: 700px;
+        height: 600px;
+        margin: 20px;
         #player_info{
-          background-color: yellow;
           padding-top: 10px;
-          // #_name{
-          //   display:inline-block;
-          // }
-          // #_level{
-          //   display:inline-block;
-          //   padding-left:15%;
-          // }
-          // #_health{
-          //   padding-left:5%;
-          // }
-          // #_exp{
-          //   padding-left:5%;
-          //   padding-left:1%;
-          // }
+          #_name{
+            display:inline;
+          }
+          #_level{
+            display:inline;
+            margin-left: 250px;
+          }
+          #_health{
+            display: block;
+          }
+          #_exp{
+            display: block;
+          }
         }
         #player_equipment{
-          background-color: purple;
           // #_head{
           //   padding-left:6%;  
           // }
@@ -85,22 +82,34 @@ body {
         }
       }
       #inventory_window {
-        background-color: pink;
+        font-family: 'Press Start 2P', cursive;
+        border: 3px solid #000;
         width: 20%;
-        height: 290px;
+        height: 300px;
+        margin: 20px;
         ul {
-          list-style-type: none; 
+          list-style-type: none;
+          li {
+            font-size: 13px;
+          } 
         }
       }
       #game_window {
-        width: 80%;
-        height: 700px;
-        background-color: red;
+        width: 75%;
+        height: 600px;
+        border: 3px solid #000;
+        margin: 20px;
       }
       #text_window {
-        width: 80%;
-        height: 290px;
-        background-color: green;
+        font-family: 'Press Start 2P', cursive;
+        margin: 20px;
+        width: 75%;
+        height: 300px;
+        border: 3px solid #000;
+        p {
+          margin: 15px;
+          font-size: 13px;
+        }
       }
     }
   }
