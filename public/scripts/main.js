@@ -16,17 +16,16 @@ function checkHealth(player, enemy){
   if (health <= 0){
     return deadplayer();
   }
-  if (enemy.health > 0){
-    $('.reBattle').click(function(){
-      battle(player, enemy);
-      $('#_health').html(player.health);
-      return;
-    });
+
+  if(enemy.health <= 0){
+    var exp_gain = player.exp + enemy.expreward;
+    player.exp = exp_gain;
+    return;
   }
 }
 
 
-/*
+  /*
 
 
 This will be moved? Battle function
@@ -39,6 +38,7 @@ This will be moved? Battle function
     if (player.health > 0 && enemy.health > 0){
       var hp_left = player.health - enemy.damage;
       player.health = hp_left;
+      enemy.health = enemy.health - player.damage;
       checkHealth(player, enemy);
       return "Playa Has Taken " + enemy.damage + "  damage";
     }
@@ -79,6 +79,15 @@ This will be moved? Battle function
       }));
       // instantiates new enemy onclick
       window.donaldduck = new paw.enemies.DonaldDuck();
+
+      $('.reBattle').click(function(){
+        battle(window.player, window.donaldduck);
+        $('#_health').html(player.health);
+        return;
+      });
+  
+
+
       // runs battle between player & enemy donald duck
       $('#text_window').append($('<p>', {
         class: 'dialogue',

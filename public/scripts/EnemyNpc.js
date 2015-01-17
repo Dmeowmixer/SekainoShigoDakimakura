@@ -40,7 +40,7 @@ paw.enemies = {
     return function(){
       paw.Enemy.call(this,
         "Donald Duck",
-        1,
+        10,
         1,
         Math.floor(Math.random()*10) + this.level,
         paw.items.RANDOM_ITEM,
