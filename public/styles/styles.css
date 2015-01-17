@@ -6055,18 +6055,25 @@ body #content #game_screen {
     border: 3px solid #000;
     width: 20%;
     height: 600px;
-    margin: 20px; }
+    margin: 20px;
+    font-family: 'Press Start 2P', cursive; }
     body #content #game_screen #player_window #player_info {
-      padding-top: 10px; }
+      padding-top: 10px;
+      font-size: 13px; }
       body #content #game_screen #player_window #player_info #_name {
         display: inline; }
       body #content #game_screen #player_window #player_info #_level {
         display: inline;
-        margin-left: 250px; }
+        margin-left: 150px; }
       body #content #game_screen #player_window #player_info #_health {
         display: block; }
       body #content #game_screen #player_window #player_info #_exp {
         display: block; }
+      body #content #game_screen #player_window #player_info #_image {
+        margin-top: 150px;
+        margin-left: 35px; }
+        body #content #game_screen #player_window #player_info #_image img {
+          height: 300px; }
   body #content #game_screen #inventory_window {
     font-family: 'Press Start 2P', cursive;
     border: 3px solid #000;
@@ -6082,6 +6089,10 @@ body #content #game_screen {
     height: 600px;
     border: 3px solid #000;
     margin: 20px; }
+    body #content #game_screen #game_window #map img {
+      margin-top: 20px;
+      height: 550px;
+      width: 100%; }
   body #content #game_screen #text_window {
     font-family: 'Press Start 2P', cursive;
     margin: 20px;

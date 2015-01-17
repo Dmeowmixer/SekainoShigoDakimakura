@@ -37,20 +37,29 @@ body {
         width: 20%;
         height: 600px;
         margin: 20px;
+        font-family: 'Press Start 2P', cursive;
         #player_info{
           padding-top: 10px;
-          #_name{
+          font-size: 13px;
+          #_name {
             display:inline;
           }
-          #_level{
+          #_level {
             display:inline;
-            margin-left: 250px;
+            margin-left: 150px;
           }
-          #_health{
+          #_health {
             display: block;
           }
-          #_exp{
+          #_exp {
             display: block;
+          }
+          #_image {
+            margin-top: 150px;
+            margin-left: 35px;
+            img {
+              height: 300px;
+            }
           }
         }
         #player_equipment{
@@ -99,6 +108,13 @@ body {
         height: 600px;
         border: 3px solid #000;
         margin: 20px;
+        #map {
+          img {
+            margin-top: 20px;
+            height: 550px;
+            width: 100%;
+          }
+        }
       }
       #text_window {
         font-family: 'Press Start 2P', cursive;
