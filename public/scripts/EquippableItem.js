@@ -17,4 +17,4 @@ paw.EquippableItem = (function(){
 
   return EquippableItem;
 
-});
+})();

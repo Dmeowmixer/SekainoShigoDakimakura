@@ -1,4 +1,5 @@
 // namespace is paw
+
 var paw = {};
 $(document).ready(function (){
   // initialize all main things,
@@ -20,11 +21,14 @@ function checkHealth(player, enemy){
     var exp_gain = player.exp + enemy.expreward;
     player.exp = exp_gain; 
     $('#_exp').html(player.exp);
+    checkExp(player);
     appendText('You have defeated an enemizzle');
+    var item = new enemy.loot();
+    player.backpack.push(item);
+    appendInventoryText(item);
     return;
   }
 }
-
 
 function appendText(text){
   $('#text_window').append($('<p>',{
@@ -32,7 +36,17 @@ function appendText(text){
     text:text
   }));
 }
+
+
+
+function appendInventoryText(item){
+  $('#inventory_window').append($('<p>',{
+    class:'item_name',
+    text:item.name + ' : .' + item.description,
+  }));
+}
   /*
+}
 }
 
 
@@ -42,14 +56,25 @@ This will be moved? Battle function
 
 */
 
- function battle(player, enemy){
+  function checkExp(player){
+    var exp = player.exp;
+    if (exp >= player.maxExp){
+      player.level ++;
+      player.exp = 0;
+      $('#_level').html(player.level);
+      $('#_exp').html(player.exp);
+    }
+    return;
+  }
+
+  function battle(player, enemy){
     if (player.health > 0 && enemy.health > 0){
       var hp_left = player.health - enemy.damage;
       player.health = hp_left;
       enemy.health = enemy.health - player.damage;
       checkHealth(player, enemy);
       appendText('You have dealt ' + player.damage);
-
+      checkExp(player);
       return "Playa Has Taken " + enemy.damage + "  damage";
     }
     if (player.health <= 0){
@@ -58,6 +83,9 @@ This will be moved? Battle function
     }
  }
 // end
+
+
+
 
   // Fadein on title
   $('#title').stop(true).fadeIn({
@@ -88,6 +116,7 @@ This will be moved? Battle function
       $('.reBattle').click(function(){
         appendText(battle(window.player, window.donaldduck));
         $('#_health').html(player.health);
+        checkExp(window.player);
         return;
       });
   
