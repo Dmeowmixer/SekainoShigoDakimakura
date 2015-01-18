@@ -6089,11 +6089,47 @@ body #content #game_screen {
     width: 75%;
     height: 600px;
     border: 3px solid #000;
-    margin: 20px; }
-    body #content #game_screen #game_window #map img {
+    margin: 20px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    position: relative; }
+    body #content #game_screen #game_window #map p {
+      font-size: 11px;
+      margin-top: 3px; }
+    body #content #game_screen #game_window #map .map {
       margin-top: 20px;
       height: 550px;
       width: 100%; }
+    body #content #game_screen #game_window #map #subway_tunnel {
+      position: absolute;
+      left: 35%;
+      top: 60%;
+      width: 150px;
+      height: 100px; }
+    body #content #game_screen #game_window #map #unknown_tunnel {
+      position: absolute;
+      left: 60%;
+      top: 60%;
+      width: 150px;
+      height: 100px; }
+    body #content #game_screen #game_window #map #subway_entrance {
+      position: absolute;
+      left: 25%;
+      top: 25%;
+      width: 150px;
+      height: 100px; }
+    body #content #game_screen #game_window #map #my_house {
+      position: absolute;
+      left: 70%;
+      top: 30%;
+      width: 150px;
+      height: 100px; }
+    body #content #game_screen #game_window #map #temple {
+      position: absolute;
+      left: 45%;
+      top: 15%;
+      width: 250px;
+      height: 100px; }
   body #content #game_screen #text_window {
     font-family: 'Press Start 2P', cursive;
     margin: 20px;

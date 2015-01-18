@@ -109,11 +109,53 @@ body {
         height: 600px;
         border: 3px solid #000;
         margin: 20px;
+        text-align: center;
+        font-family: 'Press Start 2P', cursive;
+        position: relative;
         #map {
-          img {
+          p {
+            font-size: 11px;
+            margin-top: 3px;
+          }
+          .map {
             margin-top: 20px;
             height: 550px;
             width: 100%;
+          }
+          #subway_tunnel {
+            position: absolute;
+            left: 35%;
+            top: 60%;
+            width: 150px;
+            height: 100px;
+          }
+          #unknown_tunnel {
+            position: absolute;
+            left: 60%;
+            top: 60%;
+            width: 150px;
+            height: 100px;
+          }
+          #subway_entrance {
+            position: absolute;
+            left: 25%;
+            top: 25%;
+            width: 150px;
+            height: 100px;
+          }
+          #my_house {
+            position: absolute;
+            left: 70%;
+            top: 30%;
+            width: 150px;
+            height: 100px;
+          }
+          #temple {
+            position: absolute;
+            left: 45%;
+            top: 15%;
+            width: 250px;
+            height: 100px;
           }
         }
       }
