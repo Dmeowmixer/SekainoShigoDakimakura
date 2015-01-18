@@ -6070,8 +6070,8 @@ body #content #game_screen {
       body #content #game_screen #player_window #player_info #_exp {
         display: block; }
       body #content #game_screen #player_window #player_info #_image {
-        margin-top: 150px;
-        margin-left: 35px; }
+        margin: 150px auto;
+        text-align: center; }
         body #content #game_screen #player_window #player_info #_image img {
           height: 300px; }
   body #content #game_screen #inventory_window {
@@ -6079,7 +6079,8 @@ body #content #game_screen {
     border: 3px solid #000;
     width: 20%;
     height: 300px;
-    margin: 20px; }
+    margin: 20px;
+    overflow-y: scroll; }
     body #content #game_screen #inventory_window ul {
       list-style-type: none; }
       body #content #game_screen #inventory_window ul li {
@@ -6098,7 +6099,8 @@ body #content #game_screen {
     margin: 20px;
     width: 75%;
     height: 300px;
-    border: 3px solid #000; }
+    border: 3px solid #000;
+    overflow-y: scroll; }
     body #content #game_screen #text_window p {
       margin: 15px;
       font-size: 13px; }
