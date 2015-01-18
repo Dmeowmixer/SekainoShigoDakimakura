@@ -10,23 +10,24 @@ paw.Player = (function (){
   function Player(name){
     this.name = name;
     this.exp = 0;
-    this.health = 100;
-    this.strength = 1;
-    this.agility = 1;
-    this.luck = 1;
     this.level = 1;
+    this.agility = 1 + this.level;
+    this.maxExp = 100 * this.level;
+    this.health = 100 + this.agility;
+    this.strength = 1 + this.level;
+    this.luck = 1 + this.level;
     this.damage = 5 + this.strength;
     this.equipped = {
-      head:null,
-      torso:null,// torso: new paw.items.DragonBallShirt(),
-      lefthand:null,
-      righthand:null,
-      legs:null,// legs:new paw.items.SwordArtOnlineBoxers(),
-      feet:null
+      HEAD:null,
+      BODY:null,// torso: new paw.items.DragonBallShirt(),
+      LHAND:null,
+      RHAND:null,
+      LEGS:null,// legs:new paw.items.SwordArtOnlineBoxers(),
+      FEET:null
     };
-    var backpack = [];
-    var maxHealth = 500;
-    var abilities = {
+    this.backpack = [];
+    this.maxHealth = 1000;
+    this.abilities = {
       ability1: "Nerd Rage",
       ability2: "Chibi SharkNado",
       ability3: "Kaio-Kenx1"
@@ -40,8 +41,11 @@ paw.Player = (function (){
       this.effect = "Player gains 20 damage at the cost of his dignity";
     };
 
-    Player.prototype.equipItem = function(slot, item){
-      
+    Player.prototype.equipItem = function(item){
+      if(this.backpack.indexOf(item) > -1){
+        var slot = item.slot;
+        this.equipped[slot] = item;
+      }
     };
 
     // Returns players backpack
@@ -99,7 +103,7 @@ paw.Player = (function (){
     }else{ 
       return false;
     }
-  }
+  };
   Player.slots = {
     HEAD : "HEAD",
     BODY : "BODY",
@@ -109,7 +113,7 @@ paw.Player = (function (){
     BOTHHANDS : "BOTHHANDS",
     LEGS : "LEGS",
     FEET : "FEET"   
-  }
+  };
   return Player;
 })();
 

@@ -43,7 +43,7 @@ paw.enemies = {
         10,
         1,
         Math.floor(Math.random()*10),
-        paw.items.RANDOM_ITEM,
+        paw.items.JonHelmet,
         5,//-paw.Player.strength;
         null
       );

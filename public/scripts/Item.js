@@ -60,8 +60,8 @@ paw.items = {
         paw.Player.slots.HEAD,
         null ,//str
         -4 ,// agi
-        null,
-        0
+        null,//luk
+        0//dmg
       );
     };
   })(),
@@ -297,7 +297,6 @@ paw.items = {
     };
   })()
 };
-
 
 
 
