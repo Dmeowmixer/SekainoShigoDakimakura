@@ -15,7 +15,7 @@ paw.Player = (function (){
     this.agility = 1;
     this.luck = 1;
     this.level = 1;
-    this.damage = 1;
+    this.damage = 5 + this.strength;
     this.equipped = {
       head:null,
       torso:null,// torso: new paw.items.DragonBallShirt(),

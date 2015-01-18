@@ -18,7 +18,8 @@ function checkHealth(player, enemy){
   }
   if(enemy.health <= 0){
     var exp_gain = player.exp + enemy.expreward;
-    player.exp = exp_gain;
+    player.exp = exp_gain; 
+    $('#_exp').html(player.exp);
     appendText('You have defeated an enemizzle');
     return;
   }
@@ -47,6 +48,8 @@ This will be moved? Battle function
       player.health = hp_left;
       enemy.health = enemy.health - player.damage;
       checkHealth(player, enemy);
+      appendText('You have dealt ' + player.damage);
+
       return "Playa Has Taken " + enemy.damage + "  damage";
     }
     if (player.health <= 0){
@@ -54,11 +57,6 @@ This will be moved? Battle function
       return;
     }
  }
-
-
-
-
-
 // end
 
   // Fadein on title

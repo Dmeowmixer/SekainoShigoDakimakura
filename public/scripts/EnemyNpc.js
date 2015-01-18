@@ -24,7 +24,7 @@ paw.bossenemies = {
         "Vegeta",
         Math.floor(Math.random()*150) -paw.Player.agility, //hp
         Math.floor(Math.random()*10),
-        Math.floor(Math.random()*10) + this.level,
+        Math.floor(Math.random()*10),
         paw.items.RANDOM_ITEM,
         5,
         null
@@ -42,7 +42,7 @@ paw.enemies = {
         "Donald Duck",
         10,
         1,
-        Math.floor(Math.random()*10) + this.level,
+        Math.floor(Math.random()*10),
         paw.items.RANDOM_ITEM,
         5,//-paw.Player.strength;
         null
@@ -56,7 +56,7 @@ paw.enemies = {
         "Akihabara Fanboy",
         Math.floor(Math.random()*100)-paw.Player.agility, //hp
         Math.floor(Math.random()*10), //lvl
-        Math.floor(Math.random()*10) + this.level, // exprwd
+        Math.floor(Math.random()*10), // exprwd
         paw.items.RANDOM_ITEM,
         5,//-paw.Player.strength;
         null
@@ -71,7 +71,7 @@ paw.enemies = {
         "Gackt",
         50 - paw.Player.agility,//hp
         200,
-        1 + this.level,
+        Math.floor(Math.random()*10), // exprwd
         paw.items.RANDOM_ITEM,
         null
       );

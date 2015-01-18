@@ -55,8 +55,8 @@ body {
             display: block;
           }
           #_image {
-            margin-top: 150px;
-            margin-left: 35px;
+            margin: 150px auto;
+            text-align: center;
             img {
               height: 300px;
             }
@@ -96,6 +96,7 @@ body {
         width: 20%;
         height: 300px;
         margin: 20px;
+        overflow-y: scroll;
         ul {
           list-style-type: none;
           li {
@@ -122,6 +123,7 @@ body {
         width: 75%;
         height: 300px;
         border: 3px solid #000;
+        overflow-y: scroll;
         p {
           margin: 15px;
           font-size: 13px;
