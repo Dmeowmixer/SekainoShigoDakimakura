@@ -9,6 +9,9 @@ paw.Item = (function (){
   function Item(name, description){
     this.name = name;
     this.description = description;
+    this.toString = function(){
+      return this.name;      
+    };
   }
   return Item;
 })();

@@ -42,8 +42,20 @@ function appendText(text){
 function appendInventoryText(item){
   $('#inventory_window').append($('<p>',{
     class:'item_name',
-    text:item.name + ' : .' + item.description,
+    text:item.name + ' : ' + item.description
   }));
+  $('.item_name').click(function(){
+    window.player.equipItem(item);
+    console.log(item + ' was equipped');
+    $('#text_window').append($('<p>',{
+      class:'item_name',
+      text:item.name + ' was equipped.'
+    }));
+    $('#_head').append($('<p>',{
+      class:'equip_slots',
+      text: item.name
+    }));
+  });
 }
   /*
 }
