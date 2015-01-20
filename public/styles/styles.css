@@ -6130,6 +6130,15 @@ body #content #game_screen {
       top: 15%;
       width: 250px;
       height: 100px; }
+    body #content #game_screen #game_window #battle_window {
+      visibility: hidden; }
+      body #content #game_screen #game_window #battle_window #player_image {
+        margin-top: 10px;
+        background-image: url(../images/test-sheet.gif);
+        width: 160px;
+        height: 120px;
+        -webkit-animation: attack-right 0.5s steps(4) infinite;
+        animation: attack-right 0.5s steps(4) infinite; }
   body #content #game_screen #text_window {
     font-family: 'Press Start 2P', cursive;
     margin: 20px;
@@ -6140,3 +6149,17 @@ body #content #game_screen {
     body #content #game_screen #text_window p {
       margin: 15px;
       font-size: 13px; }
+
+@-webkit-keyframes attack-right {
+  from {
+    background-position: 0px; }
+
+  to {
+    background-position: -764px; } }
+
+@keyframes attack-right {
+  from {
+    background-position: 0px; }
+
+  to {
+    background-position: -764px; } }

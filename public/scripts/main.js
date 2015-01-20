@@ -106,6 +106,10 @@ This will be moved? Battle function
 
 
     $('#subway_tunnel').click(function(){
+
+      $('#map').hide();
+      $('#battle_window').css('visibility', 'visible');
+
       $('#text_window').append($('<p>',{
         class:'dialogue',
         text:'BE A MAN, there is no turning back now.'

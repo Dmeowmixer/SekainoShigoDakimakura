@@ -158,6 +158,17 @@ body {
             height: 100px;
           }
         }
+        #battle_window {
+          visibility: hidden;
+          #player_image {
+            margin-top: 10px;
+            background-image: url(../images/test-sheet.gif);
+            width: 160px;
+            height: 120px;
+            -webkit-animation: attack-right 0.5s steps(4) infinite;
+            animation: attack-right 0.5s steps(4) infinite;
+          }
+        }
       }
       #text_window {
         font-family: 'Press Start 2P', cursive;
@@ -173,4 +184,12 @@ body {
       }
     }
   }
+}
+@-webkit-keyframes attack-right {
+  from { background-position: 0px; }
+  to   { background-position: -764px; }
+}
+@keyframes attack-right {
+  from { background-position: 0px; }
+  to   { background-position: -764px; }
 }
