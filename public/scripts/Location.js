@@ -20,7 +20,6 @@ paw.locations = {
 
   subway_tunnel : (function(){
       return function(){
-      console.log('hi');
       paw.Location.call(this,
 
         " This is the new city",// message
