@@ -6,7 +6,7 @@ $(document).ready(function (){
 
 
 // start
-function deadplayer (player){
+function deadplayer(player){
   alert('GG noob, uninstall yo OS you fail @ interwebz');
   location.reload();
 }
@@ -30,6 +30,15 @@ function checkHealth(player, enemy){
   }
 }
 
+/*
+
+    $('#_head').append($('<p>',{
+      class:'equip_slots',
+      text: item.name
+    }));
+
+*/
+
 function appendText(text){
   $('#text_window').append($('<p>',{
     class:'dialogue',
@@ -51,22 +60,13 @@ function appendInventoryText(item){
       class:'item_name',
       text:item.name + ' was equipped.'
     }));
-    $('#_head').append($('<p>',{
+    $('#_'+ item.slot).append($('<p>',{
       class:'equip_slots',
       text: item.name
     }));
   });
 }
-  /*
-}
-}
 
-
-This will be moved? Battle function
-
-
-
-*/
 
   function checkExp(player){
     var exp = player.exp;
@@ -143,11 +143,12 @@ This will be moved? Battle function
     });
 
 
-    $('#unknown_tunnel').click(function(){
+    $('#unknown_tunnel').click(function(enemy){
       $('#text_window').html($('<p>', {
         class: "dialogue",
         text: "You have entered the unknown tunnel"
       }));
+      battle(window.player ,enemy); 
     });
 
 

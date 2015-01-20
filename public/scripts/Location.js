@@ -13,32 +13,33 @@ paw.Location = (function(){
     this.boss = new boss();
   }
 
-
   return Location;
 })();
 
 paw.locations = {
 
   subway_tunnel : (function(){
-    return function(){
+      return function(){
+      console.log('hi');
       paw.Location.call(this,
+
         " This is the new city",// message
-        null,//encounters
+        paw.enemies.DonaldDuck,//encounters
         null,// treasures
-        null// boss
-      )
-    }
+        paw.bossenemies.Vegeta// boss
+      );
+    };
   })(),
 
   unknown_tunnel : (function(){
     return function(){
       paw.Location.call(this,
         " You have entered the unknown_tunnel oh nooo", // message
-        null,// enemies
+        paw.enemies.DonaldDuck,// enemies
         [paw.items.EnergyDrink],// treasures
         paw.bossenemies.Vegeta// boss
-      )
-    }
+      );
+    };
   })(),
 
   subway_entrance : (function(){
@@ -47,8 +48,8 @@ paw.locations = {
         null,// message
         null,// encounters
         null// treasures
-      )
-    }
+      );
+    };
   })(),
 
   my_house : (function(){
@@ -57,8 +58,8 @@ paw.locations = {
         null,// message
         null,// encounters
         null// treasures
-      )
-    }
+      );
+    };
   })(),
 
   temple : (function(){
@@ -67,8 +68,8 @@ paw.locations = {
         null,// message
         null,// encounters
         null// treasures  
-      )
-    }
+      );
+    };
   })()
 
 }

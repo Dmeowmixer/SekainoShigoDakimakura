@@ -95,11 +95,12 @@ paw.enemies = {
   Dubstep : (function(){
     return function(){
       paw.Enemy.call(this,
-        50 - paw.Player.agility,
-        Math.floor(Math.random()*20),
+        "Dubstep",
+        10,
+        1,
         Math.floor(Math.random()*10),
-        paw.items.RANDOM_ITEM,
-        10 - paw.Players.luck,
+        paw.items.GenericSword,
+        5,//-paw.Player.strength;
         null
       );
     };
@@ -109,6 +110,7 @@ paw.enemies = {
   tinyTitan : (function(){
     return function(){
       paw.Enemy.call(this,
+        "Tiny Titan",
         10 - paw.Players.agility,
         Math.floor(Math.random()*25),
         Math.floor(Math.random()*15),
@@ -122,6 +124,7 @@ paw.enemies = {
   DakimakuraWorshipper : (function(){
     return function(){
       paw.Enemy.call(this,
+        "DakimakuraWorshipper",
         20 - paw.Players.agility,
         Math.floor(Math.random()*300),
         Math.floor(Math.random()*40),

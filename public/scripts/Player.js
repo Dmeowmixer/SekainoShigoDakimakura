@@ -39,6 +39,7 @@ paw.Player = (function (){
 
     var NerdRage = function(effect, damage){  
       this.effect = "Player gains 20 damage at the cost of his dignity";
+      
     };
 
     Player.prototype.checkEquip = function(item){
@@ -46,22 +47,14 @@ paw.Player = (function (){
       if (this.slot === this.equipped[slot]){
         this.backpack.push(this.equipped[slot]);
       }
-      return; 
+      return;
     };
     Player.prototype.equipItem = function(item){
       var slot = item.slot;
-          //find value of this index 
-          //set that value ^ to the item we're trying to equip
-          //push this index back to backpack array
-        this.checkEquip();
-        this.equipped[slot] = item;          
+      this.checkEquip();
+      this.equipped[slot] = item;                    
     };
 
-    // Returns players backpack
-
-    Player.prototype.getPack = function(){
-      return backpack;
-    };
 
 
     // returns players max HP
@@ -80,16 +73,12 @@ paw.Player = (function (){
   // Defining pick up item function 
 
   Player.prototype.takeItem = function(item){
-    if(this.getPack().length < 15){
-      this.getPack().push(item);
-      return true;
-    }
-    else{
-      return false;
+    if(this.backpack.length < 50){
+      this.backpack.push(item);
+      return;
     }
   };
 
-  // Defining discard item function
 
 
 
@@ -105,12 +94,11 @@ paw.Player = (function (){
   */
 
   Player.prototype.discardItem = function(item){
-    var itemfound = this.getPack().indexOf(item);
+    var itemfound = backpack.indexOf(item);
     if(itemfound != -1){
-      // Discard item here
-      return true;
-    }else{ 
-      return false;
+      // is this how I access the index?
+      item.splice([],1);
+      return;
     }
   };
   Player.slots = {
