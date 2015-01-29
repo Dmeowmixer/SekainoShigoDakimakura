@@ -168,6 +168,21 @@ body {
             -webkit-animation: attack-right 0.5s steps(4) infinite;
             animation: attack-right 0.5s steps(4) infinite;
           }
+          .reBattle {
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            background-color: #000;
+            color: #FFF;
+            text-transform: uppercase;
+            padding: 10px 15px;
+            margin: 5px auto;
+            width: 10%;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 3px 3px #d3d3d3;
+            font-weight: bold;
+          }
         }
       }
       #text_window {
@@ -176,7 +191,7 @@ body {
         width: 75%;
         height: 300px;
         border: 3px solid #000;
-        overflow-y: scroll;
+        overflow: auto;
         p {
           margin: 15px;
           font-size: 13px;

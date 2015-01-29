@@ -103,12 +103,19 @@ This will be moved? Battle function
 
     $('#title_screen').hide();
     $('#game_screen').css('visibility', 'visible');
+    $('#text_window').scrollTop($('#text_window').height());
 
 
     $('#subway_tunnel').click(function(){
 
       $('#map').hide();
       $('#battle_window').css('visibility', 'visible');
+
+      $('.reBattle').click(function(){
+        $('#player_image').css('position', 'absolute');
+        $('#player_image').animate({left:'850px'});
+        $('#player_image').animate({left:'20px'});
+      });
 
       $('#text_window').append($('<p>',{
         class:'dialogue',
@@ -134,6 +141,13 @@ This will be moved? Battle function
         return;
     });
 
+
+    // var objDiv = document.getElementById("text_window");
+    // objDiv.scrollTop = objDiv.scrollHeight;
+    window.setInterval(function() {
+      var elem = document.getElementById('text_window');
+      elem.scrollTop = elem.scrollHeight;
+    }, 1000);
 
     $('#unknown_tunnel').click(function(){
       $('#text_window').html($('<p>', {

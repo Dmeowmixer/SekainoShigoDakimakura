@@ -6139,13 +6139,27 @@ body #content #game_screen {
         height: 120px;
         -webkit-animation: attack-right 0.5s steps(4) infinite;
         animation: attack-right 0.5s steps(4) infinite; }
+      body #content #game_screen #game_window #battle_window .reBattle {
+        position: absolute;
+        bottom: 20px;
+        right: 40px;
+        background-color: #000;
+        color: #FFF;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        margin: 5px auto;
+        width: 10%;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 3px 3px #d3d3d3;
+        font-weight: bold; }
   body #content #game_screen #text_window {
     font-family: 'Press Start 2P', cursive;
     margin: 20px;
     width: 75%;
     height: 300px;
     border: 3px solid #000;
-    overflow-y: scroll; }
+    overflow: auto; }
     body #content #game_screen #text_window p {
       margin: 15px;
       font-size: 13px; }
