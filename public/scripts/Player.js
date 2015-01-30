@@ -1,45 +1,77 @@
-paw.Player = (function (){
-
-
-  /*
-    
-    Defines the Player prototype
-
-  */
+paw.Player = (function(){
 
   function Player(name){
     this.name = name;
     this.exp = 0;
     this.level = 1;
     this.agility = 1 + this.level;
-    this.maxExp = 100 * this.level;
-    this.health = 100 + this.agility;
     this.strength = 1 + this.level;
     this.luck = 1 + this.level;
+    this.maxExp = 100*this.level;
+    this.health = 100 + this.agility;
     this.damage = 5 + this.strength;
     this.equipped = {
       HEAD:null,
-      BODY:null,// torso: new paw.items.DragonBallShirt(),
+      BODY:null,
       LHAND:null,
       RHAND:null,
-      LEGS:null,// legs:new paw.items.SwordArtOnlineBoxers(),
+      LEGS:null,
       FEET:null
     };
     this.backpack = [];
     this.maxHealth = 1000;
-    this.abilities = {
-      ability1: "Nerd Rage",
-      ability2: "Chibi SharkNado",
-      ability3: "Kaio-Kenx1"
-    };
     this.isAlive = true;
-
     var self = this;
 
+    Player.prototype.deadPlayer = function(){
+      if(this.health <= 0 ){
+        alert('GG noob, uninstall yo OS you fail @ interwebz');
+        location.reload();
+      }
+    };
+    
+    Player.prototype.checkHealth = function(enemy){
+      if(this.health <= 0){
+        return this.deadPlayer();
+      }
+      if(enemy.health <= 0){
+        var exp_gain = this.exp + enemy.expreward;
+        this.exp = exp_gain;
+        $('#_exp').html(player.exp);
+        var item = new enemy.loot();
+        this.backpack.push(item);
+        return;
+      }
+    };
 
-    var NerdRage = function(effect, damage){  
-      this.effect = "Player gains 20 damage at the cost of his dignity";
-      
+    Player.prototype.checkExp = function(){
+      if(this.exp >= player.maxExp){
+        this.level ++;
+        player.exp = 0;
+        $('#_level').html(this.level);
+        $('#_exp').html(player.exp);
+      }
+    };
+
+    Player.prototype.battle = function(enemy){
+      if (this.health > 0 && enemy.health > 0){
+        var hp_left = this.health - enemy.damage;
+        this.health = hp_left;
+        enemy.health = hp_left;
+        enemy.health = enemy.health - this.damage;
+        this.checkHealth(enemy);
+        // appendText here
+        this.checkExp();
+        return "Playa has taken" + enemy.damage + " damage";
+      }
+      if (this.health <= 0){
+        this.deadPlayer();
+        return;
+      }
+    };
+
+    Player.prototype.rebattle = function(){
+      this.battle(enemy);
     };
 
     Player.prototype.checkEquip = function(item){
@@ -49,84 +81,46 @@ paw.Player = (function (){
       }
       return;
     };
+
     Player.prototype.equipItem = function(item){
       var slot = item.slot;
       this.checkEquip();
-      this.equipped[slot] = item;                    
+      this.equipped[slot] = item;
     };
-
-
-
-    // returns players max HP
 
     Player.prototype.getMaxHealth = function(){
       return maxHealth;
     };
 
-    // returns players abilities
-
     Player.prototype.getAbility = function(){
       return abilities;
     };
-  }
 
-  // Defining pick up item function 
+    Player.prototype.takeItem = function(item){
+      if(this.backpack.length < 50){
+        this.backpack.push(item);
+        return;
+      }
+    };
 
-  Player.prototype.takeItem = function(item){
-    if(this.backpack.length < 50){
-      this.backpack.push(item);
-      return;
-    }
-  };
+    Player.prototype.discardItem = function(item){
+      var itemfound = backpack.indexOf(item);
+      if(itemfound != -1){
+        // is this index of found?
+        item.splice([], 1);
+        return;
+      }
+    };
 
-
-
-
-
-
-
-  /*
-
-
-  !!!! Working on Discarding item !!!!!!
-
-
-  */
-
-  Player.prototype.discardItem = function(item){
-    var itemfound = backpack.indexOf(item);
-    if(itemfound != -1){
-      // is this how I access the index?
-      item.splice([],1);
-      return;
-    }
-  };
-  Player.slots = {
-    HEAD : "HEAD",
-    BODY : "BODY",
-    RHAND : "RHAND",
-    LHAND : "LHAND",
-    ANYHAND : "ANYHAND",
-    BOTHHANDS : "BOTHHANDS",
-    LEGS : "LEGS",
-    FEET : "FEET"   
-  };
-  return Player;
-})();
-
-// function Spell (damage, description){
-//   this.damage = damage;
-//   this.description = description;
-// }
-
-// var nerdrage = new Spell(effect){
-
-// }
-
-// var kaiokenx1 = new Spell(){
-
-// }
-
-// var chibisharknado = new Spell(){
-
-// }
+    Player.slots = {
+      HEAD : "HEAD",
+      BODY : "BODY",
+      RHAND : "RHAND",
+      LHAND : "LHAND",
+      ANYHAND : "ANYHAND",
+      BOTHHANDS : "BOTHHANDS",
+      LEGS : "LEGS",
+      FEET : "FEET"
+    };
+    return Player;
+}})();

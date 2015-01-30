@@ -4,41 +4,6 @@ var paw = {};
 $(document).ready(function (){
   // initialize all main things,
 
-
-// start
-function deadplayer(player){
-  alert('GG noob, uninstall yo OS you fail @ interwebz');
-  location.reload();
-}
-// checks players health within a function to see if player is still alive
-// runs deadplayer function if player reaches 0 health after enemy attack
-function checkHealth(player, enemy){
-  var health = player.health;
-  if (health <= 0){
-    return deadplayer();
-  }
-  if(enemy.health <= 0){
-    var exp_gain = player.exp + enemy.expreward;
-    player.exp = exp_gain; 
-    $('#_exp').html(player.exp);
-    checkExp(player);
-    appendText('You have defeated an enemizzle');
-    var item = new enemy.loot();
-    player.backpack.push(item);
-    appendInventoryText(item);
-    return;
-  }
-}
-
-/*
-
-    $('#_head').append($('<p>',{
-      class:'equip_slots',
-      text: item.name
-    }));
-
-*/
-
 function appendText(text){
   $('#text_window').append($('<p>',{
     class:'dialogue',
@@ -55,47 +20,16 @@ function appendInventoryText(item){
   }));
   $('.item_name').click(function(){
     window.player.equipItem(item);
-    console.log(item + ' was equipped');
     $('#text_window').append($('<p>',{
       class:'item_name',
       text:item.name + ' was equipped.'
     }));
-    $('#_'+ item.slot).append($('<p>',{
+    $('#_'+ item.slot).html($('<p>',{
       class:'equip_slots',
       text: item.name
     }));
   });
 }
-
-
-  function checkExp(player){
-    var exp = player.exp;
-    if (exp >= player.maxExp){
-      player.level ++;
-      player.exp = 0;
-      $('#_level').html(player.level);
-      $('#_exp').html(player.exp);
-    }
-    return;
-  }
-
-  function battle(player, enemy){
-    if (player.health > 0 && enemy.health > 0){
-      var hp_left = player.health - enemy.damage;
-      player.health = hp_left;
-      enemy.health = enemy.health - player.damage;
-      checkHealth(player, enemy);
-      appendText('You have dealt ' + player.damage);
-      checkExp(player);
-      return "Playa Has Taken " + enemy.damage + "  damage";
-    }
-    if (player.health <= 0){
-      deadplayer();
-      return;
-    }
- }
-// end
-
 
 
 
@@ -111,22 +45,21 @@ function appendInventoryText(item){
     window.player = new paw.Player("Tonyizzle");
     player_window();
     var current_health  = window.player.health;
-
+    // window.subway_tunnel = new paw.locations.subway_tunnel();
 
     $('#title_screen').hide();
     $('#game_screen').css('visibility', 'visible');
 
 
     $('#subway_tunnel').click(function(){
-      $('#text_window').append($('<p>',{
+      $('<div id="text_window"></div>').append($('<p>',{
         class:'dialogue',
         text:'BE A MAN, there is no turning back now.'
       }));
       // instantiates new enemy onclick
-      window.donaldduck = new paw.enemies.DonaldDuck();
 
       $('.reBattle').click(function(){
-        appendText(battle(window.player, window.donaldduck));
+        appendText(battle(window.player, window.donaldduck ));
         $('#_health').html(player.health);
         checkExp(window.player);
         return;
