@@ -86,6 +86,7 @@ paw.Player = (function(){
       var slot = item.slot;
       this.checkEquip();
       this.equipped[slot] = item;
+      
     };
 
     Player.prototype.getMaxHealth = function(){

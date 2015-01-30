@@ -1,5 +1,10 @@
+paw.windows.player_window = {
+  name : $('#_name'),
+  level : $('#_level')
+  //etc 
+};
 function player_window(){
-  var player_window = $('#player_window');
+  // var player_window = $('#player_window');
   $('#_name').text(window.player.name);
 
   $('#_level').text("Lvl " + window.player.level);
