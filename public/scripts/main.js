@@ -4,32 +4,32 @@ var paw = {};
 $(document).ready(function (){
   // initialize all main things,
 
-function appendText(text){
-  $('#text_window').append($('<p>',{
-    class:'dialogue',
-    text:text
-  }));
-}
-
-
-
-function appendInventoryText(item){
-  $('#inventory_window').append($('<p>',{
-    class:'item_name',
-    text:item.name + ' : ' + item.description
-  }));
-  $('.item_name').click(function(){
-    window.player.equipItem(item);
+  function appendText(text){
     $('#text_window').append($('<p>',{
+      class:'dialogue',
+      text:text
+    }));
+  }
+
+
+
+  function appendInventoryText(item){
+    $('#inventory_window').append($('<p>',{
       class:'item_name',
-      text:item.name + ' was equipped.'
+      text:item.name + ' : ' + item.description
     }));
-    $('#_'+ item.slot).html($('<p>',{
-      class:'equip_slots',
-      text: item.name
-    }));
-  });
-}
+    $('.item_name').click(function(){
+      window.player.equipItem(item);
+      $('#text_window').append($('<p>',{
+        class:'item_name',
+        text:item.name + ' was equipped.'
+      }));
+      $('#_'+ item.slot).html($('<p>',{
+        class:'equip_slots',
+        text: item.name
+      }));
+    });
+  }
 
 
 
@@ -105,6 +105,6 @@ function appendInventoryText(item){
         text:"wha...whAAT ARE THEY DOING TO MY WAIFU!?@$#%"
       }));
     });  
-    text_window( );
+    text_window();
   });
 });

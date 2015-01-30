@@ -1,4 +1,4 @@
- paw.Enemy = (function(){
+paw.Enemy = (function(){
 
  // Defines the enemy subclass
   function Enemy(name, health, level, expreward, loot, damage, abilities){
@@ -13,12 +13,12 @@
     } 
   });
   return Enemy;
- })();
+})();
   
 paw.bossenemies = {
   // move bosses into this object
   
-    Vegeta : (function(){
+  Vegeta : (function(){
     return function(){
       paw.Enemy.call(this,
         "Vegeta",
