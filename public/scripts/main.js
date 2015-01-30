@@ -103,6 +103,7 @@ This will be moved? Battle function
 
     $('#title_screen').hide();
     $('#game_screen').css('visibility', 'visible');
+    //Auto scroll to bottom
     $('#text_window').scrollTop($('#text_window').height());
 
 
@@ -111,10 +112,17 @@ This will be moved? Battle function
       $('#map').hide();
       $('#battle_window').css('visibility', 'visible');
 
+      //Enemy attacks player when entered in subway tunnel
+      $('#enemy_image').css('-webkit-animation', 'attack-left 0.5s steps(3) infinite');
+      $('#enemy_image').animate({right:'1250px'}).animate({right:'20px'});
+
+      // Player and enemy moves to attack
       $('.reBattle').click(function(){
-        $('#player_image').css('position', 'absolute');
-        $('#player_image').animate({left:'850px'});
-        $('#player_image').animate({left:'20px'});
+        $('#player_image').css('-webkit-animation', 'attack-right 0.5s steps(4) infinite');
+        $('#player_image').animate({left:'600px'}).animate({left:'20px'});
+
+        $('#enemy_image').css('-webkit-animation', 'attack-left 0.5s steps(3) infinite');
+        $('#enemy_image').animate({right:'730px'}).animate({right:'20px'});
       });
 
       $('#text_window').append($('<p>',{

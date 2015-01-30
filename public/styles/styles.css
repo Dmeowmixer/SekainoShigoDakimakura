@@ -6053,12 +6053,12 @@ body #content #game_screen {
   visibility: hidden; }
   body #content #game_screen #player_window {
     border: 3px solid #000;
-    width: 20%;
-    height: 600px;
     margin: 20px;
-    font-family: 'Press Start 2P', cursive; }
+    width: 20%;
+    height: 600px; }
     body #content #game_screen #player_window #player_info {
       padding-top: 10px;
+      font-family: 'Press Start 2P', cursive;
       font-size: 13px; }
       body #content #game_screen #player_window #player_info #_name {
         display: inline; }
@@ -6075,70 +6075,79 @@ body #content #game_screen {
         body #content #game_screen #player_window #player_info #_image img {
           height: 300px; }
   body #content #game_screen #inventory_window {
-    font-family: 'Press Start 2P', cursive;
+    overflow-y: scroll;
     border: 3px solid #000;
+    margin: 20px;
     width: 20%;
     height: 300px;
-    margin: 20px;
-    overflow-y: scroll; }
+    font-family: 'Press Start 2P', cursive;
+    font-size: 13px; }
     body #content #game_screen #inventory_window ul {
       list-style-type: none; }
       body #content #game_screen #inventory_window ul li {
-        font-size: 13px; }
+        font-family: 'Press Start 2P', cursive;
+        font-size: 15px; }
   body #content #game_screen #game_window {
-    width: 75%;
-    height: 600px;
+    position: relative;
+    text-align: center;
     border: 3px solid #000;
     margin: 20px;
-    text-align: center;
-    font-family: 'Press Start 2P', cursive;
-    position: relative; }
+    width: 75%;
+    height: 600px; }
     body #content #game_screen #game_window #map p {
-      font-size: 11px;
-      margin-top: 3px; }
+      margin-top: 3px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 11px; }
     body #content #game_screen #game_window #map .map {
       margin-top: 20px;
-      height: 550px;
-      width: 100%; }
+      width: 100%;
+      height: 550px; }
     body #content #game_screen #game_window #map #subway_tunnel {
       position: absolute;
-      left: 35%;
       top: 60%;
+      left: 35%;
       width: 150px;
       height: 100px; }
     body #content #game_screen #game_window #map #unknown_tunnel {
       position: absolute;
-      left: 60%;
       top: 60%;
+      left: 60%;
       width: 150px;
       height: 100px; }
     body #content #game_screen #game_window #map #subway_entrance {
       position: absolute;
-      left: 25%;
       top: 25%;
+      left: 25%;
       width: 150px;
       height: 100px; }
     body #content #game_screen #game_window #map #my_house {
       position: absolute;
-      left: 70%;
       top: 30%;
+      left: 70%;
       width: 150px;
       height: 100px; }
     body #content #game_screen #game_window #map #temple {
       position: absolute;
-      left: 45%;
       top: 15%;
+      left: 45%;
       width: 250px;
       height: 100px; }
     body #content #game_screen #game_window #battle_window {
       visibility: hidden; }
       body #content #game_screen #game_window #battle_window #player_image {
-        margin-top: 10px;
-        background-image: url(../images/test-sheet.gif);
+        position: absolute;
+        margin-top: 15%;
+        background-image: url(../images/tony.png);
         width: 160px;
         height: 120px;
-        -webkit-animation: attack-right 0.5s steps(4) infinite;
         animation: attack-right 0.5s steps(4) infinite; }
+      body #content #game_screen #game_window #battle_window #enemy_image {
+        position: absolute;
+        margin-top: 15%;
+        background-image: url(../images/duck.svg);
+        width: 140px;
+        height: 100px;
+        animation: attack-left 0.5s steps(3) infinite; }
       body #content #game_screen #game_window #battle_window .reBattle {
         position: absolute;
         bottom: 20px;
@@ -6154,14 +6163,14 @@ body #content #game_screen {
         box-shadow: 3px 3px #d3d3d3;
         font-weight: bold; }
   body #content #game_screen #text_window {
-    font-family: 'Press Start 2P', cursive;
+    overflow: auto;
+    border: 3px solid #000;
     margin: 20px;
     width: 75%;
-    height: 300px;
-    border: 3px solid #000;
-    overflow: auto; }
+    height: 300px; }
     body #content #game_screen #text_window p {
       margin: 15px;
+      font-family: 'Press Start 2P', cursive;
       font-size: 13px; }
 
 @-webkit-keyframes attack-right {
@@ -6177,3 +6186,17 @@ body #content #game_screen {
 
   to {
     background-position: -764px; } }
+
+@-webkit-keyframes attack-left {
+  from {
+    background-position: -399px; }
+
+  to {
+    background-position: 0px; } }
+
+@keyframes attack-left {
+  from {
+    background-position: -399px; }
+
+  to {
+    background-position: 0px; } }
