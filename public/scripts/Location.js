@@ -21,7 +21,6 @@ paw.locations = {
   subway_tunnel : (function(){
       return function(){
       paw.Location.call(this,
-
         " This is the new city",// message
         paw.enemies.DonaldDuck,//encounters
         null,// treasures
@@ -44,6 +43,7 @@ paw.locations = {
   subway_entrance : (function(){
     return function(){
       paw.Location.call(this,
+        " You have reached the subways entrance",
         null,// message
         null,// encounters
         null// treasures
@@ -54,6 +54,7 @@ paw.locations = {
   my_house : (function(){
     return function(){
       paw.Location.call(this,
+        " You somehow have made it home",
         null,// message
         null,// encounters
         null// treasures
@@ -64,11 +65,11 @@ paw.locations = {
   temple : (function(){
     return function(){
       paw.Location.call(this,
+        " wha...whAAT ARE THEY DOING TO MY WAIFU!?@$#%",
         null,// message
         null,// encounters
         null// treasures  
       );
     };
   })()
-
 };

@@ -4,7 +4,6 @@ paw.windows.game_window = {
   subway_entrance : $('#subway_entrance').append('<p>Subway Entrance</p>'),
   my_house : $('#my_house').append('<p>My House</p>'),
   temple : $('#temple').append('<p>Temple</p>'),
-
 };
 
 // $(function(){
