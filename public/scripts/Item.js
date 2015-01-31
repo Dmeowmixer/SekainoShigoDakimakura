@@ -116,7 +116,7 @@ paw.items = {
       paw.EquippableItem.call(this,
         "GokusPowerPole",
         "Gokus Extending Pole",
-        paw.Player.slots.BOTHHANDS,
+        paw.Player.slots.RHAND,
 
         5, //str,
         5, //agi,
