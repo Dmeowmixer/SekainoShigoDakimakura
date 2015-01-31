@@ -45,7 +45,7 @@ paw.locations = {
       paw.Location.call(this,
         " You have reached the subways entrance",
         null,// message
-        null,// encounters
+        paw.enemies.Raditz,// encounters
         null// treasures
       );
     };
@@ -56,7 +56,7 @@ paw.locations = {
       paw.Location.call(this,
         " You somehow have made it home",
         null,// message
-        null,// encounters
+        paw.enemies.HollowIchigo,// encounters
         null// treasures
       );
     };
@@ -67,7 +67,7 @@ paw.locations = {
       paw.Location.call(this,
         " wha...whAAT ARE THEY DOING TO MY WAIFU!?@$#%",
         null,// message
-        null,// encounters
+        AshKetchum,// encounters
         null// treasures  
       );
     };

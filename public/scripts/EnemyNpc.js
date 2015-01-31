@@ -40,10 +40,10 @@ paw.enemies = {
     return function(){
       paw.Enemy.call(this,
         "Donald Duck",
-        10,
+        30,
         1,
         Math.floor(Math.random()*10),
-        paw.items.JonHelmet,
+        paw.items.GenericSword,
         5,//-paw.Player.strength;
         null
       );
@@ -54,10 +54,10 @@ paw.enemies = {
     return function(){
       paw.Enemy.call(this,
         "Raditz",
-        Math.floor(Math.random()*100)-paw.Player.agility, //hp
+        50-paw.Player.agility, //hp
         Math.floor(Math.random()*10), //lvl
         Math.floor(Math.random()*10), // exprwd
-        paw.items.RANDOM_ITEM,
+        paw.items.MadeInChinaShoes,
         5,//-paw.Player.strength;
         null
       );
@@ -69,10 +69,10 @@ paw.enemies = {
     return function(){
       paw.Enemy.call(this,
         "Hollow Ichigo",
-        50 - paw.Player.agility,//hp
+        60 - paw.Player.agility,//hp
         200,
         Math.floor(Math.random()*10), // exprwd
-        paw.items.RANDOM_ITEM,
+        paw.items.SaiyansArmor,
         null
       );
     };
@@ -128,7 +128,7 @@ paw.enemies = {
         20 - paw.Players.agility,
         Math.floor(Math.random()*300),
         Math.floor(Math.random()*40),
-        paw.items.RANDOM_ITEM,
+        paw.items.KiritosSword,
         Math.floor(Math.random()*60)-paw.Players.luck,
         null
       );
