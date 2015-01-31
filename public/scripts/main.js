@@ -41,6 +41,7 @@ $(document).ready(function (){
 
     paw.session.player = new paw.Player("Tonyizzle");
     paw.session.subwaytunnel = new paw.locations.subway_tunnel();
+    
     // player_window();
     var current_health  = paw.session.player.health;
     // window.subway_tunnel = new paw.locations.subway_tunnel();
@@ -55,7 +56,8 @@ $(document).ready(function (){
         text:'BE A MAN, there is no turning back now.'
       }));
       // instantiates new enemy onclick
-      var subwayenemy = paw.session.subwaytunnel.encounters[Math.floor(Math.random()*7)];
+      // string is not referencing actual enemy, only a string
+      paw.session.subwaytunnel.encounters[Math.floor(Math.random()*7)];
       // how do i run the player method battle??
       $('.reBattle').click(function(){
         // appendText(battle(paw.session.player, window.donaldduck ));
