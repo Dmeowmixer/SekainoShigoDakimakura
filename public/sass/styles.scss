@@ -3,44 +3,73 @@
 @import "http://fonts.googleapis.com/css?family=Press+Start+2P:400.css";
 @import "http://fonts.googleapis.com/css?family=Rock+Salt:400.css";
 
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin button-style() {
+  background-color: #000;
+  color: #FFF;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  margin: 5px auto;
+  width: 10%;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px #d3d3d3;
+  font-weight: bold;
+}
+
+@mixin game-font($font-size) {
+  font-family: 'Press Start 2P', cursive;
+  font-size: $font-size;
+}
+
+@mixin location-position($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin black-border() {
+  border: 3px solid #000;
+  margin: 20px;
+}
+
 body {
   #content {
+    position: fixed;
+    background-image: url(../images/title-bkgd.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
     #title_screen {
-      text-align: center;
       position: fixed;
       display: block;
+      text-align: center;
       top: 40%;
       width: 100%;
       h1 {
         display: none;
         font-size: 2em;
         font-family: 'Rock Salt', cursive;
+        text-shadow: 2px 2px #000;
         margin-bottom: 50px;
+        color: #FFF;
       }
       button {
-        background-color: #000;
-        color: #FFF;
-        text-transform: uppercase;
-        padding: 10px 15px;
-        margin: 5px auto;
-        width: 10%;
-        border: none;
-        border-radius: 5px;
-        box-shadow: 3px 3px #d3d3d3;
-        font-weight: bold;
+        @include button-style;
       }
     }
     #game_screen {
       visibility: hidden;
       #player_window{
-        border: 3px solid #000;
-        width: 20%;
-        height: 600px;
-        margin: 20px;
-        font-family: 'Press Start 2P', cursive;
+        @include black-border;
+        @include size(20%, 600px);
         #player_info{
           padding-top: 10px;
-          font-size: 13px;
+          @include game-font(13px);
           #_name {
             display:inline;
           }
@@ -91,86 +120,122 @@ body {
         }
       }
       #inventory_window {
-        font-family: 'Press Start 2P', cursive;
-        border: 3px solid #000;
-        width: 20%;
-        height: 300px;
-        margin: 20px;
         overflow-y: scroll;
+        @include black-border;
+        @include size(20%, 300px);
+        @include game-font(13px);
         ul {
           list-style-type: none;
           li {
-            font-size: 13px;
+            @include game-font(15px);
           } 
         }
       }
       #game_window {
-        width: 75%;
-        height: 600px;
-        border: 3px solid #000;
-        margin: 20px;
-        text-align: center;
-        font-family: 'Press Start 2P', cursive;
         position: relative;
+        text-align: center;
+        @include black-border;
+        @include size(75%, 600px);
         #map {
           p {
-            font-size: 11px;
             margin-top: 3px;
+            @include game-font(11px)
           }
           .map {
             margin-top: 20px;
-            height: 550px;
-            width: 100%;
+            @include size(100%, 550px);
           }
           #subway_tunnel {
-            position: absolute;
-            left: 35%;
-            top: 60%;
-            width: 150px;
-            height: 100px;
+            @include location-position(60%, 35%);
+            @include size(150px, 100px);
           }
           #unknown_tunnel {
-            position: absolute;
-            left: 60%;
-            top: 60%;
-            width: 150px;
-            height: 100px;
+            @include location-position(60%, 60%);
+            @include size(150px, 100px);
           }
           #subway_entrance {
-            position: absolute;
-            left: 25%;
-            top: 25%;
-            width: 150px;
-            height: 100px;
+            @include location-position(25%, 25%);
+            @include size(150px, 100px);
           }
           #my_house {
-            position: absolute;
-            left: 70%;
-            top: 30%;
-            width: 150px;
-            height: 100px;
+            @include location-position(30%, 70%);
+            @include size(150px, 100px);
           }
           #temple {
+            @include location-position(15%, 45%);
+            @include size(250px, 100px);
+          }
+        }
+        #battle_window {
+          visibility: hidden;
+          margin-top: 15px;
+          .player_attack {
             position: absolute;
-            left: 45%;
-            top: 15%;
-            width: 250px;
-            height: 100px;
+            margin-top: 27%;
+            background-image: url(../images/tony.png);
+            @include size(160px, 120px);
+            #particle {
+              visibility: hidden;
+              position: fixed;
+              left: 58%;
+              background-image: url(../images/slash.svg);
+              -webkit-animation: slash 0.5s steps(3);
+              animation: slash 0.5s steps(3);
+              @include size(70px, 90px);
+            }
+          }
+          .enemy_attack {
+            position: absolute;
+            margin-top: 27%;
+            background-image: url(../images/duck.svg);
+            @include size(140px, 100px);
+          }
+          .reBattle {
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            @include button-style;
           }
         }
       }
       #text_window {
-        font-family: 'Press Start 2P', cursive;
-        margin: 20px;
-        width: 75%;
-        height: 300px;
-        border: 3px solid #000;
-        overflow-y: scroll;
+        overflow: auto;
+        @include black-border;
+        @include size(75%, 300px);
         p {
           margin: 15px;
-          font-size: 13px;
+          @include game-font(13px)
         }
       }
     }
   }
+}
+@-webkit-keyframes attack-right {
+  0%     { background-position: 0px; }
+  100%   { background-position: -764px; }
+}
+
+@keyframes attack-right {
+  0%     { background-position: 0px; }
+  100%   { background-position: -764px; }
+}
+
+@-webkit-keyframes attack-left{
+  0%     { background-position: -399px; }
+  100%   { background-position: 0px; }
+}
+
+@keyframes attack-left {
+  0%     { background-position: -399px; }
+  100%   { background-position: 0px; }
+}
+
+@-webkit-keyframes slash {
+  0%     { background-position: 0px; }
+  100%   { background-position: -261px; }
+}
+
+@keyframes slash {
+  0%     { background-position: 0px; }
+  100%   { background-position: -261px; }
 }
