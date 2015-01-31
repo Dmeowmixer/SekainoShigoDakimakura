@@ -1,5 +1,6 @@
-(function(){
-  paw.Player = function Player(name){
+
+  paw.Player = (function(){
+    function Player(name){
 
       this.name = name;
       this.exp = 0;
@@ -22,6 +23,7 @@
       this.maxHealth = 1000;
       this.isAlive = true;
       var self = this;
+  }
 
       Player.prototype.deadPlayer = function(){
         if(this.health <= 0 ){
@@ -45,11 +47,11 @@
       };
 
       Player.prototype.checkExp = function(){
-        if(this.exp >= player.maxExp){
+        if(this.exp >= this.maxExp){
           this.level ++;
-          player.exp = 0;
+          this.exp = 0;
           $('#_level').html(this.level);
-          $('#_exp').html(player.exp);
+          $('#_exp').html(this.exp);
         }
       };
 
@@ -124,5 +126,4 @@
         FEET : "FEET"
       };
       return Player;
-  };
 })();

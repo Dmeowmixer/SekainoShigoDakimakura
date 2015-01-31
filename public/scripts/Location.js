@@ -8,7 +8,7 @@ paw.Location = (function(){
 
   function Location(message, encounters, treasures, boss){
     this.message = message;
-    this.encounters = Object.keys(paw.enemies);
+    this.encounters = encounters;
     this.treasures = treasures;
     this.boss = new boss();
   }

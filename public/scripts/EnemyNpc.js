@@ -17,7 +17,7 @@ paw.Enemy = (function(){
   
 paw.bossenemies = {
   // move bosses into this object
-  
+  // ask jon to explain this
   Vegeta : (function(){
     return function(){
       paw.Enemy.call(this,
