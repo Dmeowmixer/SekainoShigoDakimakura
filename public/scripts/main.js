@@ -12,8 +12,9 @@ $(document).ready(function() {
       text: text
     }));
   }
-  
+
   paw.appendInventoryText = function appendInventoryText(item) {
+
     var new_inventory_item = ($('<p>', {
       class: 'item_name',
       text: item.name + ' : ' + item.description
@@ -21,11 +22,19 @@ $(document).ready(function() {
     paw.windows.inventory_window.append(new_inventory_item);
 
     new_inventory_item.click(function() {
+      var itemslot = new_inventory_item.slot;
+      var indexofitem = playa.backpack.indexOf(item);
+      new_inventory_item.remove();
+
       playa.equipItem(item);
+      playa.backpack.splice(indexofitem, 1);
+
       paw.windows.text_window.append($('<p>', {
         class: 'item_name',
         text: item.name + ' was equipped.'
       }));
+
+
       $('#_' + item.slot).html($('<p>', {
         class: 'equip_slots',
         text: item.name

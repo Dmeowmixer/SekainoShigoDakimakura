@@ -50,10 +50,10 @@ paw.enemies = {
     };
   })(),
 
-  AkihabaraFanBoy : (function(){
+  Raditz : (function(){
     return function(){
       paw.Enemy.call(this,
-        "Akihabara Fanboy",
+        "Raditz",
         Math.floor(Math.random()*100)-paw.Player.agility, //hp
         Math.floor(Math.random()*10), //lvl
         Math.floor(Math.random()*10), // exprwd
@@ -65,10 +65,10 @@ paw.enemies = {
   })(),
 
 
-  Gackt : (function(){
+  HollowIchigo : (function(){
     return function(){
       paw.Enemy.call(this,
-        "Gackt",
+        "Hollow Ichigo",
         50 - paw.Player.agility,//hp
         200,
         Math.floor(Math.random()*10), // exprwd
@@ -92,10 +92,10 @@ paw.enemies = {
     };
   })(),
 
-  Dubstep : (function(){
+  QueenBarrel : (function(){
     return function(){
       paw.Enemy.call(this,
-        "Dubstep",
+        "Queen Barrel",
         10,
         1,
         Math.floor(Math.random()*10),
@@ -121,10 +121,10 @@ paw.enemies = {
     };
   })(),
 
-  DakimakuraWorshipper : (function(){
+  AshKetchum : (function(){
     return function(){
       paw.Enemy.call(this,
-        "DakimakuraWorshipper",
+        "Ash Ketchum",
         20 - paw.Players.agility,
         Math.floor(Math.random()*300),
         Math.floor(Math.random()*40),
