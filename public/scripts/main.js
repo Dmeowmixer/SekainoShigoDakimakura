@@ -67,7 +67,8 @@ $(document).ready(function() {
     $('#_exp').append("xp " + playa.exp);
     if (playa.backpack.length === 0) {
       $('#inventory_window').append('<p>YOU NEED ITAMZ</p>');
-    } else {
+    }
+    else {
       for (var i = 0; i < backpack.length; i++) {
         $('#inventory_window').append(playa.backpack[i]);
       }
@@ -75,9 +76,11 @@ $(document).ready(function() {
   });
 
 
-  $('#subway_tunnel').click(function() {
+
+  $('#subway_tunnel').click(function(){
 
     $('#map').hide();
+    $('#content').css('position', 'relative');
     $('#battle_window').css('visibility', 'visible');
     $('#battle_window').css('height', '500px');
     $('#battle_window').css('background-image', 'url(../images/subway-bkgd.svg)');
@@ -100,13 +103,10 @@ $(document).ready(function() {
     //Enemy attacks player when entered in subway tunnel
     $('#enemy_image').css('-webkit-animation', 'attack-left 0.5s steps(3)');
     $('#enemy_image').css('animation', 'attack-left 0.5s steps(3)');
-    $('#enemy_image').animate({
-      right: '1250px'
-    }).animate({
-      right: '20px'
-    });
+    $('#enemy_image').animate({right: '1250px'}).animate({right: '20px'});
 
-    $('.reBattle').click(function() {
+   
+    $('.reBattle').click(function(){
       //Animation runs once for ever click
       var playerImg = $('#player_image');
       var newPlayerImg = playerImg.clone(true);
@@ -125,19 +125,11 @@ $(document).ready(function() {
       //  Player and enemy moves to attack
       $('#player_image').css('-webkit-animation', 'attack-right 0.5s steps(4)');
       $('#player_image').css('animation', 'attack-right 0.5s steps(4)');
-      $('#player_image').animate({
-        left: '600px'
-      }).animate({
-        left: '20px'
-      });
+      $('#player_image').animate({left: '600px'}).animate({left: '20px'});
 
       $('#enemy_image').css('-webkit-animation', 'attack-left 0.5s steps(3)');
       $('#enemy_image').css('animation', 'attack-left 0.5s steps(3) 1');
-      $('#enemy_image').animate({
-        right: '730px'
-      }).animate({
-        right: '20px'
-      });
+      $('#enemy_image').animate({right: '730px'}).animate({right: '20px'});
 
       $('#particle').css('visibility', 'visible');
 
@@ -148,20 +140,11 @@ $(document).ready(function() {
     });
   });
 
-
-  // runs battle between player & enemy donald duck
-  // appendText(battle(playa, window.donaldduck));
-
-
-
-  // var objDiv = document.getElementById("text_window");
-  // objDiv.scrollTop = objDiv.scrollHeight;
-
-  $('#unknown_tunnel').click(function() {
-    window.setInterval(function() {
-      var elem = document.getElementById('text_window');
-      elem.scrollTop = elem.scrollHeight;
-    }, 1000);
+  $('#unknown_tunnel').click(function(){
+    // window.setInterval(function() {
+    //   var elem = document.getElementById('text_window');
+    //   elem.scrollTop = elem.scrollHeight;
+    // }, 1000);
 
     $('#text_window').html($('<p>', {
       class: "dialogue",
@@ -220,5 +203,4 @@ $(document).ready(function() {
     playa.checkExp(playa);
     return;
   });
-  // paw.windows.text_window();
 });
