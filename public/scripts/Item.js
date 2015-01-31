@@ -74,7 +74,7 @@ paw.items = {
       paw.EquippableItem.call(this,
         "GenericSword",
         "Bought off Ebay",
-        paw.Player.slots.ANYHAND,
+        paw.Player.slots.RHAND,
         Math.floor(Math.random()*5),
         Math.floor(Math.random()*5),
         Math.floor(Math.random()*5),
@@ -116,7 +116,7 @@ paw.items = {
       paw.EquippableItem.call(this,
         "GokusPowerPole",
         "Gokus Extending Pole",
-        paw.Player.slots.BOTHHANDS,
+        paw.Player.slots.RHAND,
 
         5, //str,
         5, //agi,
