@@ -74,7 +74,7 @@ paw.items = {
       paw.EquippableItem.call(this,
         "GenericSword",
         "Bought off Ebay",
-        paw.Player.slots.ANYHAND,
+        paw.Player.slots.RHAND,
         Math.floor(Math.random()*5),
         Math.floor(Math.random()*5),
         Math.floor(Math.random()*5),
