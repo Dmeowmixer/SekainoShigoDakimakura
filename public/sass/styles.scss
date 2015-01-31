@@ -39,10 +39,15 @@
 
 body {
   #content {
+    position: fixed;
+    background-image: url(../images/title-bkgd.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
     #title_screen {
-      text-align: center;
       position: fixed;
       display: block;
+      text-align: center;
       top: 40%;
       width: 100%;
       h1 {
@@ -50,6 +55,7 @@ body {
         font-size: 2em;
         font-family: 'Rock Salt', cursive;
         margin-bottom: 50px;
+        color: #FFF;
       }
       button {
         @include button-style;
@@ -161,21 +167,27 @@ body {
         }
         #battle_window {
           visibility: hidden;
-          #player_image {
+          margin-top: 15px;
+          background-image: url(../images/subway-bkgd.svg) ;
+          height: 500px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: 100% 90%;
+          .player_attack {
             position: absolute;
-            margin-top: 15%;
+            margin-top: 27%;
             background-image: url(../images/tony.png);
             @include size(160px, 120px);
-            // -webkit-animation: attack-right 0.5s steps(4) infinite;
-            animation: attack-right 0.5s steps(4) infinite;
+            #particle {
+              margin-left: 120px;
+              @include size(70px, 90px);
+            }
           }
-          #enemy_image {
+          .enemy_attack {
             position: absolute;
-            margin-top: 15%;
+            margin-top: 27%;
             background-image: url(../images/duck.svg);
             @include size(140px, 100px);
-            // -webkit-animation: attack-left 0.5s steps(3) infinite;
-            animation: attack-left 0.5s steps(3) infinite;
           }
           .reBattle {
             position: absolute;
@@ -198,19 +210,31 @@ body {
   }
 }
 @-webkit-keyframes attack-right {
-  from { background-position: 0px; }
-  to   { background-position: -764px; }
+  0%     { background-position: 0px; }
+  100%   { background-position: -764px; }
 }
+
 @keyframes attack-right {
-  from { background-position: 0px; }
-  to   { background-position: -764px; }
+  0%     { background-position: 0px; }
+  100%   { background-position: -764px; }
 }
 
 @-webkit-keyframes attack-left{
-  from { background-position: -399px; }
-  to   { background-position: 0px; }
+  0%     { background-position: -399px; }
+  100%   { background-position: 0px; }
 }
+
 @keyframes attack-left {
-  from { background-position: -399px; }
-  to   { background-position: 0px; }
+  0%     { background-position: -399px; }
+  100%   { background-position: 0px; }
+}
+
+@-webkit-keyframes slash {
+  0%     { background-position: 0px; }
+  100%   { background-position: -261px; }
+}
+
+@keyframes slash {
+  0%     { background-position: 0px; }
+  100%   { background-position: -261px; }
 }

@@ -103,6 +103,7 @@ This will be moved? Battle function
 
     $('#title_screen').hide();
     $('#game_screen').css('visibility', 'visible');
+    $('#content').css('background-image', 'none');
     //Auto scroll to bottom
     $('#text_window').scrollTop($('#text_window').height());
 
@@ -111,19 +112,11 @@ This will be moved? Battle function
 
       $('#map').hide();
       $('#battle_window').css('visibility', 'visible');
-
-      //Enemy attacks player when entered in subway tunnel
-      $('#enemy_image').css('-webkit-animation', 'attack-left 0.5s steps(3) infinite');
-      $('#enemy_image').animate({right:'1250px'}).animate({right:'20px'});
-
-      // Player and enemy moves to attack
-      $('.reBattle').click(function(){
-        $('#player_image').css('-webkit-animation', 'attack-right 0.5s steps(4) infinite');
-        $('#player_image').animate({left:'600px'}).animate({left:'20px'});
-
-        $('#enemy_image').css('-webkit-animation', 'attack-left 0.5s steps(3) infinite');
-        $('#enemy_image').animate({right:'730px'}).animate({right:'20px'});
-      });
+      $('#battle_window').css('height', '500px');
+      $('#battle_window').css('background-image', 'url(../images/subway-bkgd.svg)');
+      $('#battle_window').css('background-size', 'cover');
+      $('#battle_window').css('background-repeat', 'no-repeat');
+      $('#battle_window').css('background-position', '100% 90%');
 
       $('#text_window').append($('<p>',{
         class:'dialogue',
@@ -132,7 +125,39 @@ This will be moved? Battle function
       // instantiates new enemy onclick
       window.donaldduck = new paw.enemies.DonaldDuck();
 
+      //Enemy attacks player when entered in subway tunnel
+      $('#enemy_image').css('-webkit-animation', 'attack-left 0.5s steps(3)');
+      $('#enemy_image').css('animation', 'attack-left 0.5s steps(3)');
+      $('#enemy_image').animate({right:'1250px'}).animate({right:'20px'});
+
       $('.reBattle').click(function(){
+        //Animation runs once for ever click
+        var playerImg = $('#player_image');
+        var newPlayerImg = playerImg.clone(true);
+
+        playerImg.before(newPlayerImg);
+
+        $("." + playerImg.attr("class") + ":last").remove();
+
+        var enemyImg = $('#enemy_image');
+        var newEnemyImg = enemyImg.clone(true);
+
+        enemyImg.before(newEnemyImg);
+
+        $("." + enemyImg.attr("class") + ":last").remove();
+
+        //  Player and enemy moves to attack
+        $('#player_image').css('-webkit-animation', 'attack-right 0.5s steps(4)');
+        $('#player_image').css('animation', 'attack-right 0.5s steps(4)');
+        $('#player_image').animate({left:'600px'}).animate({left:'20px'});
+
+        $('#enemy_image').css('-webkit-animation', 'attack-left 0.5s steps(3)');
+        $('#enemy_image').css('animation', 'attack-left 0.5s steps(3) 1');
+        $('#enemy_image').animate({right:'730px'}).animate({right:'20px'});
+
+        // $('#particle').css('background-image', 'url(../images/slash.svg)');
+        // $('#particle').css('-webkit-animation', 'slash 0.5s steps(3)');
+
         appendText(battle(window.player, window.donaldduck));
         $('#_health').html(player.health);
         checkExp(window.player);
