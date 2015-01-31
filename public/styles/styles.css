@@ -6082,6 +6082,36 @@ body #content {
           text-align: center; }
           body #content #game_screen #player_window #player_info #_image img {
             height: 300px; }
+        body #content #game_screen #player_window #player_info #player_equipment #_HEAD {
+          position: absolute;
+          top: 30%;
+          left: 30%; }
+        body #content #game_screen #player_window #player_info #player_equipment #_BODY {
+          background-color: red;
+          height: 10px;
+          width: 10px;
+          position: absolute;
+          top: 45%;
+          left: 70%; }
+        body #content #game_screen #player_window #player_info #player_equipment #_RHAND {
+          background-color: yellow;
+          height: 10px;
+          width: 10px;
+          position: absolute;
+          top: 60%;
+          left: 85%; }
+        body #content #game_screen #player_window #player_info #player_equipment #_LHAND {
+          background-color: green;
+          height: 10px;
+          width: 10px; }
+        body #content #game_screen #player_window #player_info #player_equipment #_LEGS {
+          background-color: pink;
+          height: 10px;
+          width: 10px; }
+        body #content #game_screen #player_window #player_info #player_equipment #_FEET {
+          background-color: blue;
+          height: 10px;
+          width: 10px; }
     body #content #game_screen #inventory_window {
       overflow-y: scroll;
       border: 3px solid #000;
