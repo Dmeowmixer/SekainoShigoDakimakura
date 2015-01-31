@@ -54,6 +54,7 @@ body {
         display: none;
         font-size: 2em;
         font-family: 'Rock Salt', cursive;
+        text-shadow: 2px 2px #000;
         margin-bottom: 50px;
         color: #FFF;
       }
@@ -168,18 +169,18 @@ body {
         #battle_window {
           visibility: hidden;
           margin-top: 15px;
-          background-image: url(../images/subway-bkgd.svg) ;
-          height: 500px;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: 100% 90%;
           .player_attack {
             position: absolute;
             margin-top: 27%;
             background-image: url(../images/tony.png);
             @include size(160px, 120px);
             #particle {
-              margin-left: 120px;
+              visibility: hidden;
+              position: fixed;
+              left: 58%;
+              background-image: url(../images/slash.svg);
+              -webkit-animation: slash 0.5s steps(3);
+              animation: slash 0.5s steps(3);
               @include size(70px, 90px);
             }
           }

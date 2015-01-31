@@ -155,8 +155,7 @@ This will be moved? Battle function
         $('#enemy_image').css('animation', 'attack-left 0.5s steps(3) 1');
         $('#enemy_image').animate({right:'730px'}).animate({right:'20px'});
 
-        // $('#particle').css('background-image', 'url(../images/slash.svg)');
-        // $('#particle').css('-webkit-animation', 'slash 0.5s steps(3)');
+        $('#particle').css('visibility', 'visible');
 
         appendText(battle(window.player, window.donaldduck));
         $('#_health').html(player.health);
