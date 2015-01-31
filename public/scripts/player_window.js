@@ -4,11 +4,11 @@ function player_window(){
 
   $('#_level').text("Lvl " + window.player.level);
   
-  $('#_health').text(window.player.health); 
+  $('#_health').text("Hps " + window.player.health); 
   // var health = document.getElementById("health");
   // health.value = paw.Player.health.value; 
 
-  $('#_exp').text(window.player.exp);
+  $('#_exp').text("Exp " + window.player.exp);
   // var exp = document.getElementById("exp");
   // exp.value = paw.Player.exp.value;
   $('#_head').text(window.player.head);

@@ -34,18 +34,27 @@ paw.Player = (function (){
     };
     this.isAlive = true;
 
-
+    var self = this;
 
 
     var NerdRage = function(effect, damage){  
       this.effect = "Player gains 20 damage at the cost of his dignity";
     };
 
-    Player.prototype.equipItem = function(item){
-      if(this.backpack.indexOf(item) > -1){
-        var slot = item.slot;
-        this.equipped[slot] = item;
+    Player.prototype.checkEquip = function(item){
+      var slot = this.equipped;
+      if (this.slot === this.equipped[slot]){
+        this.backpack.push(this.equipped[slot]);
       }
+      return; 
+    };
+    Player.prototype.equipItem = function(item){
+      var slot = item.slot;
+          //find value of this index 
+          //set that value ^ to the item we're trying to equip
+          //push this index back to backpack array
+        this.checkEquip();
+        this.equipped[slot] = item;          
     };
 
     // Returns players backpack
