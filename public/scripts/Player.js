@@ -37,17 +37,21 @@ paw.Player = (function() {
     }
 
     if (enemy.health <= 0) {
+      
       var exp_gain = this.exp + enemy.expreward;
       this.exp += exp_gain;
       $('#_exp').html(this.exp);
       var item = new enemy.loot();
       this.backpack.push(item);
       paw.appendInventoryText(item);
-      
-      
+      if (paw.lastEnemy){
+          alert('yaay...you win....DO YOU FEEL BETTER ABOUT YOURSEF NOW? DO YOU? HUH DO YOU?');
+          location.reload();
+      }
       this.checkExp();
 
       $('#text_window').append('<p>' + enemy.name + ' has been defeated</p>');
+      delete enemy;
       return;
     }
   };

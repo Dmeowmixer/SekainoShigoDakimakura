@@ -142,7 +142,7 @@ paw.enemies = {
       20,
       20,
       paw.items.MunchkinsHelmet,
-      1,
+      6,
       null
       );
     };
