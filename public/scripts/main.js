@@ -284,5 +284,9 @@ $(document).ready(function() {
       playa.checkExp(playa); 
       return;
     });
+    $('.back').click(function(){
+      $('#battle_window').css('visibility', 'hidden');
+      $('#map').show();
+    });
   });
 });
