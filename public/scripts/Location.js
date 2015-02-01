@@ -11,6 +11,7 @@ paw.Location = (function(){
     this.encounters = encounters;
     this.treasures = treasures;
     this.boss = boss;
+    this.completed = false;
   }
 
   return Location;
