@@ -220,8 +220,8 @@ paw.items = {
         "MadeInChinaShoes",
         "$1 Shoes from Chinatown",
         paw.Player.slots.FEET,
-        Math.Floor(Math.Random()*2), //str
-        Math.Floor(Math.Random()*3), //agi
+        5, //str
+        5, //agi
         null, //luk
         null //damage
       );
@@ -234,9 +234,9 @@ paw.items = {
         "ChinatownShirt",
         "10 for $20 Shirts",
         paw.Player.slots.BODY,
-        Math.Floor(Math.Random()*3), //str
-        Math.Floor(Math.Random()*3), //agi
-        Math.Floor(Math.Random()*3), //luk
+        5, //str
+        5, //agi
+        5, //luk
         null //damage
       );
     };

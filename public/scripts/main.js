@@ -4,6 +4,11 @@ $(document).ready(function() {
 
   paw.session.player = new paw.Player("Tonyizzle");
   paw.session.subwaytunnel = new paw.locations.subway_tunnel();
+  paw.session.unknowntunnel = new paw.locations.unknown_tunnel();
+  paw.session.subwayentrance = new paw.locations.subway_entrance();
+  paw.session.myhouse = new paw.locations.my_house();
+  paw.session.temple = new paw.locations.temple();
+
   var playa = paw.session.player;
 
   function appendText(text) {
@@ -153,6 +158,7 @@ $(document).ready(function() {
   });
 
   $('#unknown_tunnel').click(function(){
+    var uktunenemy = new  paw.session.unknowntunnel.encounters();
 
     $('#map').hide();
     $('#content').css('position', 'relative');
@@ -169,7 +175,7 @@ $(document).ready(function() {
       class: "dialogue",
       text: "You have entered the unknown tunnel"
     }));
-    var uktunenemy = new paw.session.unknown_tunnel.encounters();
+    console.log(uktunenemy);
     appendText(playa.battle(uktunenemy));
     $('.reBattle').click(function(){
       appendText(playa.battle(uktunenemy));
@@ -182,6 +188,9 @@ $(document).ready(function() {
 
   $('#subway_entrance').click(function() {
 
+
+    var subwayentenemy = new paw.session.subwayentrance.encounters();
+    console.log(subwayentenemy);
     $('#map').hide();
     $('#content').css('position', 'relative');
     $('#battle_window').css({
@@ -197,11 +206,10 @@ $(document).ready(function() {
       class: "dialogue",
       text: "You have reached the subways entrance"
     }));
-    var subwayentenemy = new paw.session.subway_tunnel.encounters();
     appendText(playa.battle(subwayentenemy));
     
     $('.reBattle').click(function(){
-      appendText(playa.battle(uktunenemy));
+      appendText(playa.battle(subwayentenemy));
       $('#_health').html(playa.health);
       playa.checkExp(playa);
       return;
@@ -225,7 +233,7 @@ $(document).ready(function() {
       class: "dialogue",
       text: "You somehow have made it home"
     }));
-    var houseEnemy = new paw.session.my_house.encounters();
+    var houseEnemy = new paw.session.myhouse.encounters();
     appendText(playa.battle(houseEnemy));
     $('.reBattle').click(function(){
       appendText(playa.battle(houseEnemy));
@@ -236,6 +244,8 @@ $(document).ready(function() {
   });
 
   $('#temple').click(function() {
+    var templeEnemy = new paw.session.temple.encounters();
+    console.log(templeEnemy);
 
     $('#map').hide();
     $('#content').css('position', 'relative');
@@ -252,7 +262,6 @@ $(document).ready(function() {
       class: "dialogue",
       text: "wha...whAAT ARE THEY DOING TO MY WAIFU!?@$#%"
     }));
-    var templeEnemy = new paw.session.temple.encounters();
     appendText(playa.battle(templeEnemy));
     $('#_health').html(playa.health);
     playa.checkExp(playa);

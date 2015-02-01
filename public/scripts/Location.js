@@ -10,7 +10,7 @@ paw.Location = (function(){
     this.message = message;
     this.encounters = encounters;
     this.treasures = treasures;
-    this.boss = new boss();
+    this.boss = boss;
   }
 
   return Location;
@@ -44,9 +44,9 @@ paw.locations = {
     return function(){
       paw.Location.call(this,
         " You have reached the subways entrance",
-        null,// message
         paw.enemies.Raditz,// encounters
-        null// treasures
+        null,
+        null// treasures,
       );
     };
   })(),
@@ -55,8 +55,8 @@ paw.locations = {
     return function(){
       paw.Location.call(this,
         " You somehow have made it home",
-        null,// message
         paw.enemies.HollowIchigo,// encounters
+        null,// 
         null// treasures
       );
     };
@@ -66,8 +66,8 @@ paw.locations = {
     return function(){
       paw.Location.call(this,
         " wha...whAAT ARE THEY DOING TO MY WAIFU!?@$#%",
-        null,// message
-        AshKetchum,// encounters
+        paw.enemies.AshKetchum,// encounters
+        null,//
         null// treasures  
       );
     };
