@@ -263,8 +263,11 @@ $(document).ready(function() {
       text: "wha...whAAT ARE THEY DOING TO MY WAIFU!?@$#%"
     }));
     appendText(playa.battle(templeEnemy));
-    $('#_health').html(playa.health);
-    playa.checkExp(playa);
-    return;
+    $('.reBattle').click(function(){
+      appendText(playa.battle(templeEnemy));
+      $('#_health').html(playa.health);
+      playa.checkExp(playa); 
+      return;
+    });
   });
 });
