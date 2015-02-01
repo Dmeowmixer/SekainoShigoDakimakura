@@ -185,21 +185,12 @@ body {
             margin-top: 27%;
             background-image: url(../images/tony.png);
             @include size(160px, 120px);
-            // #particle {
-            //   visibility: hidden;
-            //   position: fixed;
-            //   left: 58%;
-            //   background-image: url(../images/slash.svg);
-            //   -webkit-animation: slash 0.5s steps(3);
-            //   animation: slash 0.5s steps(3);
-            //   @include size(70px, 90px);
-            // }
           }
           .enemy_attack {
             position: absolute;
             margin-top: 27%;
-            background-image: url(../images/duck.svg);
-            @include size(140px, 100px);
+            // background-image: url(../images/raditz.gif);
+            // @include size(400px, 120px);
           }
           .reBattle {
             position: absolute;

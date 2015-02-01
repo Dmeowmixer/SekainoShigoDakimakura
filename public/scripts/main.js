@@ -112,10 +112,12 @@ $(document).ready(function() {
 
     //Enemy attacks player when entered in subway tunnel
     $('#enemy_image').css({
-      '-webkit-animation' : 'attack-left 0.5s steps(3)',
-      'animation' : 'attack-left 0.5s steps(3)'
+      'background-image': 'url(../images/donald_duck.png)',
+      'margin-top' : '24%',
+      'width' : '294px',
+      'height' : '173px',
     });
-    $('#enemy_image').animate({right: '1250px'}).animate({right: '20px'});
+    $('#enemy_image').animate({right: '1050px'}).animate({right: '20px'});
 
    
     $('.reBattle').click(function(){
@@ -138,12 +140,7 @@ $(document).ready(function() {
         'animation' : 'attack-right 0.5s steps(4)'
       });
       $('#player_image').animate({left: '600px'}).animate({left: '20px'});
-
-      $('#enemy_image').css({
-        '-webkit-animation' : 'attack-left 0.5s steps(3)',
-        'animation' : 'attack-left 0.5s steps(3)'
-      });
-      $('#enemy_image').animate({right: '730px'}).animate({right: '20px'});
+      $('#enemy_image').animate({right: '550px'}).animate({right: '20px'});
 
       appendText(playa.battle(subwayenemy));
       $('#_health').html(playa.health);
@@ -152,8 +149,8 @@ $(document).ready(function() {
     });
 
     $('.back').click(function(){
-      $('#battle_window').css('visibility', 'hidden');
       $('#map').show();
+      $('#battle_window').css('visibility', 'hidden');
     });
   });
 
@@ -177,7 +174,39 @@ $(document).ready(function() {
     }));
     console.log(uktunenemy);
     appendText(playa.battle(uktunenemy));
+
+    $('#enemy_image').css({
+      'background-image': 'url(../images/Unknown_F.svg)',
+      'background-size' : '80%',
+      'background-repeat' : 'no-repeat',
+      'width' : '100px',
+      'height' : '90px'
+    });
+    $('#enemy_image').animate({right: '1250px'}).animate({right: '20px'});
+
     $('.reBattle').click(function(){
+
+      var playerImg = $('#player_image');
+      var newPlayerImg = playerImg.clone(true);
+
+      playerImg.before(newPlayerImg);
+      $("." + playerImg.attr("class") + ":last").remove();
+
+      var enemyImg = $('#enemy_image');
+      var newEnemyImg = enemyImg.clone(true);
+
+      enemyImg.before(newEnemyImg);
+      $("." + enemyImg.attr("class") + ":last").remove();
+
+      //  Player and enemy moves to attack
+      $('#player_image').css({
+        '-webkit-animation' : 'attack-right 0.5s steps(4)',
+        'animation' : 'attack-right 0.5s steps(4)'
+      });
+      $('#player_image').animate({left: '600px'}).animate({left: '20px'});
+
+      $('#enemy_image').animate({right: '650px'}).animate({right: '20px'});
+
       appendText(playa.battle(uktunenemy));
       $('#_health').html(playa.health);
       playa.checkExp(playa);
@@ -212,8 +241,37 @@ $(document).ready(function() {
       text: "You have reached the subways entrance"
     }));
     appendText(playa.battle(subwayentenemy));
+
+    $('#enemy_image').css({
+      'background-image': 'url(../images/raditz.gif)',
+      'width' : '400px',
+      'height' : '120px'
+    });
+    $('#enemy_image').animate({right: '900px'}, 1100).animate({right: '20px'});
     
     $('.reBattle').click(function(){
+
+      var playerImg = $('#player_image');
+      var newPlayerImg = playerImg.clone(true);
+
+      playerImg.before(newPlayerImg);
+      $("." + playerImg.attr("class") + ":last").remove();
+
+      var enemyImg = $('#enemy_image');
+      var newEnemyImg = enemyImg.clone(true);
+
+      enemyImg.before(newEnemyImg);
+      $("." + enemyImg.attr("class") + ":last").remove();
+
+      //  Player and enemy moves to attack
+      $('#player_image').css({
+        '-webkit-animation' : 'attack-right 0.5s steps(4)',
+        'animation' : 'attack-right 0.5s steps(4)'
+      });
+      $('#player_image').animate({left: '600px'}).animate({left: '20px'});
+
+      $('#enemy_image').animate({right: '730px'}).animate({right: '20px'});
+
       appendText(playa.battle(subwayentenemy));
       $('#_health').html(playa.health);
       playa.checkExp(playa);
@@ -245,7 +303,39 @@ $(document).ready(function() {
     }));
     var houseEnemy = new paw.session.myhouse.encounters();
     appendText(playa.battle(houseEnemy));
+
+    $('#enemy_image').css({
+      'background-image': 'url(../images/ichigo.svg)',
+      'background-repeat' : 'no-repeat',
+      'margin-top' : '24%',
+      'width' : '200px',
+      'height' : '200px'
+    });
+    $('#enemy_image').animate({right: '1150px'}).animate({right: '20px'});
+
     $('.reBattle').click(function(){
+
+      var playerImg = $('#player_image');
+      var newPlayerImg = playerImg.clone(true);
+
+      playerImg.before(newPlayerImg);
+      $("." + playerImg.attr("class") + ":last").remove();
+
+      var enemyImg = $('#enemy_image');
+      var newEnemyImg = enemyImg.clone(true);
+
+      enemyImg.before(newEnemyImg);
+      $("." + enemyImg.attr("class") + ":last").remove();
+
+      //  Player and enemy moves to attack
+      $('#player_image').css({
+        '-webkit-animation' : 'attack-right 0.5s steps(4)',
+        'animation' : 'attack-right 0.5s steps(4)'
+      });
+      $('#player_image').animate({left: '600px'}).animate({left: '20px'});
+
+      $('#enemy_image').animate({right: '600px'}).animate({right: '20px'});
+
       appendText(playa.battle(houseEnemy));
       $('#_health').html(playa.health);
       playa.checkExp(playa);
@@ -278,7 +368,38 @@ $(document).ready(function() {
       text: "wha...whAAT ARE THEY DOING TO MY WAIFU!?@$#%"
     }));
     appendText(playa.battle(templeEnemy));
+
+    $('#enemy_image').css({
+      'background-image': 'url(../images/ashketchum.png)',
+      'background-repeat' : 'no-repeat',
+      'margin-top' : '20%',
+      'width' : '200px',
+      'height' : '200px'
+    });
+    $('#enemy_image').animate({right: '1200px'}).animate({right: '20px'});
+
     $('.reBattle').click(function(){
+      var playerImg = $('#player_image');
+      var newPlayerImg = playerImg.clone(true);
+
+      playerImg.before(newPlayerImg);
+      $("." + playerImg.attr("class") + ":last").remove();
+
+      var enemyImg = $('#enemy_image');
+      var newEnemyImg = enemyImg.clone(true);
+
+      enemyImg.before(newEnemyImg);
+      $("." + enemyImg.attr("class") + ":last").remove();
+
+      //  Player and enemy moves to attack
+      $('#player_image').css({
+        '-webkit-animation' : 'attack-right 0.5s steps(4)',
+        'animation' : 'attack-right 0.5s steps(4)'
+      });
+      $('#player_image').animate({left: '600px'}).animate({left: '20px'});
+
+      $('#enemy_image').animate({right: '600px'}).animate({right: '20px'});
+
       appendText(playa.battle(templeEnemy));
       $('#_health').html(playa.health);
       playa.checkExp(playa); 

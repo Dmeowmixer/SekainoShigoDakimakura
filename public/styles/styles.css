@@ -6151,10 +6151,7 @@ body #content {
           height: 120px; }
         body #content #game_screen #game_window #battle_window .enemy_attack {
           position: absolute;
-          margin-top: 27%;
-          background-image: url(../images/duck.svg);
-          width: 140px;
-          height: 100px; }
+          margin-top: 27%; }
         body #content #game_screen #game_window #battle_window .reBattle {
           position: absolute;
           bottom: 20px;
