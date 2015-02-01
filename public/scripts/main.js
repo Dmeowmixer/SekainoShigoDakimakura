@@ -96,6 +96,7 @@ $(document).ready(function() {
     // instantiates new enemy onclick
     // string is not referencing actual enemy, only a string
     var subwayenemy = new paw.session.subwaytunnel.encounters();
+
     paw.windows.text_window.append($('<p>', {
       class: 'dialogue',
       text: 'BE A MAN, there is no turning back now.'
