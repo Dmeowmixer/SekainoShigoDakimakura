@@ -33,7 +33,7 @@ paw.locations = {
     return function(){
       paw.Location.call(this,
         " You have entered the unknown_tunnel oh nooo", // message
-        paw.enemies.DonaldDuck,// enemies
+        paw.enemies.Unknown,// enemies
         [paw.items.EnergyDrink],// treasures
         paw.bossenemies.Vegeta// boss
       );

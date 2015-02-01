@@ -37,17 +37,19 @@ paw.Player = (function() {
     }
 
     if (enemy.health <= 0) {
-      delete enemy;
+      enemy.nextLocation();
       var exp_gain = this.exp + enemy.expreward;
       this.exp += exp_gain;
       $('#_exp').html(this.exp);
       var item = new enemy.loot();
       this.backpack.push(item);
       paw.appendInventoryText(item);
-
+      
+      
       this.checkExp();
 
       $('#text_window').append(enemy.name + ' has been defeated');
+      delete enemy;
       return;
     }
   };

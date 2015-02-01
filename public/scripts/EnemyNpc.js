@@ -1,9 +1,10 @@
 paw.Enemy = (function(){
 
  // Defines the enemy subclass
-  function Enemy(name, health, level, expreward, loot, damage, abilities){
+  function Enemy(name, health, level, expreward, loot, damage, abilities,nextLocation){
     this.damage = damage;
     this.abilities = abilities;
+    this.nextLocation = nextLocation;
     paw.NPC.call(this, name, health, level, expreward, loot);
   }
   // Enemy is a extension of NPC
@@ -31,7 +32,6 @@ paw.bossenemies = {
       );
     };
   })()
-
 };
 
 paw.enemies = {
@@ -40,12 +40,13 @@ paw.enemies = {
     return function(){
       paw.Enemy.call(this,
         "Donald Duck",
-        30,
+        20,
         1,
         Math.floor(Math.random()*10),
-        paw.items.GenericSword,
-        5,//-paw.Player.strength;
-        null
+        paw.items.KiritosSword,
+        1,//-paw.Player.strength;
+        null,
+        paw.locations.unknown_tunnel
       );
     };
   })(),
@@ -58,12 +59,12 @@ paw.enemies = {
         Math.floor(Math.random()*10), //lvl
         Math.floor(Math.random()*10), // exprwd
         paw.items.MadeInChinaShoes,
-        5,//-paw.Player.strength;
-        null
+        1,//-paw.Player.strength;
+        null,
+        paw.locations.my_house
       );
     };
   })(),
-
 
   HollowIchigo : (function(){
     return function(){
@@ -72,8 +73,9 @@ paw.enemies = {
         60 - paw.Player.agility,//hp
         200,
         Math.floor(Math.random()*10), // exprwd
-        paw.items.SaiyansArmor,
-        null
+        paw.items.StetecoPants,
+        null,
+        paw.locations.temple
       );
     };
   })(),
@@ -99,8 +101,8 @@ paw.enemies = {
         10,
         1,
         Math.floor(Math.random()*10),
-        paw.items.GenericSword,
-        5,//-paw.Player.strength;
+        paw.items.ChristmasSweater,
+        1,//-paw.Player.strength;
         null
       );
     };
@@ -125,15 +127,29 @@ paw.enemies = {
     return function(){
       paw.Enemy.call(this,
         "Ash Ketchum",
-        20 - paw.Players.agility,
+        40 - paw.Players.agility,
         Math.floor(Math.random()*300),
         Math.floor(Math.random()*40),
-        paw.items.KiritosSword,
-        Math.floor(Math.random()*60)-paw.Players.luck,
+        paw.items.HolyGrail,
+        1-paw.Players.luck,
         null
       );
     };
-  })()
+  })(),
+
+  Unknown : (function(){
+    return function(){
+      paw.Enemy.call(this,
+        "Unknown",
+      20,
+      20,
+      20,
+      paw.items.MunchkinsHelmet,
+      1,
+      paw.locations.subway_entrance
+      );
+    };
+  })
 
 };
 
