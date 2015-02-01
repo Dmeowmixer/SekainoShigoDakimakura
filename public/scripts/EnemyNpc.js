@@ -1,10 +1,9 @@
 paw.Enemy = (function(){
 
  // Defines the enemy subclass
-  function Enemy(name, health, level, expreward, loot, damage, abilities,nextLocation){
+  function Enemy(name, health, level, expreward, loot, damage, abilities){
     this.damage = damage;
     this.abilities = abilities;
-    this.nextLocation = nextLocation;
     paw.NPC.call(this, name, health, level, expreward, loot);
   }
   // Enemy is a extension of NPC
@@ -45,8 +44,7 @@ paw.enemies = {
         Math.floor(Math.random()*10),
         paw.items.KiritosSword,
         1,//-paw.Player.strength;
-        null,
-        paw.locations.unknown_tunnel
+        null
       );
     };
   })(),
@@ -55,13 +53,12 @@ paw.enemies = {
     return function(){
       paw.Enemy.call(this,
         "Raditz",
-        50-paw.Player.agility, //hp
-        Math.floor(Math.random()*10), //lvl
-        Math.floor(Math.random()*10), // exprwd
+        50, //hp
+        10, //lvl
+        20, // exprwd
         paw.items.MadeInChinaShoes,
         1,//-paw.Player.strength;
-        null,
-        paw.locations.my_house
+        null
       );
     };
   })(),
@@ -70,12 +67,12 @@ paw.enemies = {
     return function(){
       paw.Enemy.call(this,
         "Hollow Ichigo",
-        60 - paw.Player.agility,//hp
+        60,//hp
         200,
-        Math.floor(Math.random()*10), // exprwd
+        20, // exprwd
         paw.items.StetecoPants,
-        null,
-        paw.locations.temple
+        5,
+        null
       );
     };
   })(),
@@ -84,11 +81,11 @@ paw.enemies = {
     return function(){
       paw.Enemy.call(this,
         "Orochimaru",
-        200 - paw.Player.agility,
-        Math.floor(Math.random()*50),
-        Math.floor(Math.random()*20),
+        200,
+        20,
+        20,
         paw.items.RANDOM_ITEM,
-        20 - paw.Players.luck,
+        20,
         null
       );
     };
@@ -100,7 +97,7 @@ paw.enemies = {
         "Queen Barrel",
         10,
         1,
-        Math.floor(Math.random()*10),
+        10,
         paw.items.ChristmasSweater,
         1,//-paw.Player.strength;
         null
@@ -113,11 +110,11 @@ paw.enemies = {
     return function(){
       paw.Enemy.call(this,
         "Tiny Titan",
-        10 - paw.Players.agility,
-        Math.floor(Math.random()*25),
-        Math.floor(Math.random()*15),
+        10,
+        25,
+        15,
         paw.items.RANDOM_ITEM,
-        50-paw.Players.luck,
+        50,
         null
       );
     };
@@ -127,11 +124,11 @@ paw.enemies = {
     return function(){
       paw.Enemy.call(this,
         "Ash Ketchum",
-        40 - paw.Players.agility,
-        Math.floor(Math.random()*300),
-        Math.floor(Math.random()*40),
+        40,
+        40,
+        40,
         paw.items.HolyGrail,
-        1-paw.Players.luck,
+        1,
         null
       );
     };
@@ -146,10 +143,10 @@ paw.enemies = {
       20,
       paw.items.MunchkinsHelmet,
       1,
-      paw.locations.subway_entrance
+      null
       );
     };
-  })
+  })()
 
 };
 

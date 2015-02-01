@@ -37,7 +37,6 @@ paw.Player = (function() {
     }
 
     if (enemy.health <= 0) {
-      enemy.nextLocation();
       var exp_gain = this.exp + enemy.expreward;
       this.exp += exp_gain;
       $('#_exp').html(this.exp);
