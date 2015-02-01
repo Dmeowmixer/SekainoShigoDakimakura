@@ -84,7 +84,7 @@ body {
             display: block;
           }
           #_image {
-            margin: 150px auto;
+            margin: 180px auto;
             text-align: center;
             img {
               height: 300px;
@@ -93,7 +93,7 @@ body {
           #player_equipment{
             #_HEAD{
               position: absolute; 
-              top: 30%;
+              top: 35%;
               left: 30%;
             }
             #_BODY{
@@ -101,31 +101,40 @@ body {
               height: 10px;
               width: 10px;
               position: absolute;
-              top: 45%;
-              left: 70%;
+              top: 65%;
+              left: 49%;
             }
             #_RHAND{
               background-color: yellow;
               height: 10px;
               width: 10px;
               position: absolute;
-              top: 60%;
+              top: 55%;
               left: 85%;
             }
             #_LHAND{
               background-color: green;
               height: 10px;
               width: 10px;
+              position: absolute;
+              top: 55%;
+              left: 15%;
             }
             #_LEGS{
               background-color: pink;
               height: 10px;
               width: 10px;
+              position: absolute;
+              top: 85%;
+              left: 49%;
             }
             #_FEET{
               background-color: blue;
               height: 10px;
               width: 10px;
+              position: absolute;
+              top: 95%;
+              left: 49%;
             }
           }
         }
