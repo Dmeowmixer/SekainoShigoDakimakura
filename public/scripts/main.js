@@ -87,7 +87,6 @@ $(document).ready(function() {
 
 
   $('#subway_tunnel').click(function(){
-
     $('#map').hide();
     $('#content').css('position', 'relative');
     $('#battle_window').css({
@@ -245,8 +244,8 @@ $(document).ready(function() {
 
   $('#temple').click(function() {
     var templeEnemy = new paw.session.temple.encounters();
-    console.log(templeEnemy);
-
+    paw.lastEnemy = true;
+    
     $('#map').hide();
     $('#content').css('position', 'relative');
     $('#battle_window').css({
