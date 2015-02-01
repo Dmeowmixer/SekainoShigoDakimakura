@@ -183,6 +183,11 @@ $(document).ready(function() {
       playa.checkExp(playa);
       return;
     });
+    
+    $('.back').click(function(){
+      $('#battle_window').css('visibility', 'hidden');
+      $('#map').show();
+    });
   });
 
 
@@ -214,6 +219,11 @@ $(document).ready(function() {
       playa.checkExp(playa);
       return;
     });
+
+    $('.back').click(function(){
+      $('#battle_window').css('visibility', 'hidden');
+      $('#map').show();
+    });
   });
 
   $('#my_house').click(function() {
@@ -240,6 +250,11 @@ $(document).ready(function() {
       $('#_health').html(playa.health);
       playa.checkExp(playa);
       return;
+    });
+
+    $('.back').click(function(){
+      $('#battle_window').css('visibility', 'hidden');
+      $('#map').show();
     });
   });
 
