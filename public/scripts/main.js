@@ -85,13 +85,14 @@ $(document).ready(function() {
 
     $('#map').hide();
     $('#content').css('position', 'relative');
-    $('#battle_window').css('visibility', 'visible');
-    $('#battle_window').css('height', '500px');
-    $('#battle_window').css('background-image', 'url(../images/subway-bkgd.svg)');
-    $('#battle_window').css('background-size', 'cover');
-    $('#battle_window').css('background-repeat', 'no-repeat');
-    $('#battle_window').css('background-position', '100% 90%');
-
+    $('#battle_window').css({
+      'visibility' : 'visible',
+      'height' : '500px',
+      'background-image' : 'url(../images/subway-bkgd.svg)',
+      'background-size' : 'cover',
+      'background-repeat' : 'no-repeat',
+      'background-position' : '100% 90%'
+    });
 
     // instantiates new enemy onclick
     // string is not referencing actual enemy, only a string
@@ -105,8 +106,10 @@ $(document).ready(function() {
     appendText(playa.battle(subwayenemy));
 
     //Enemy attacks player when entered in subway tunnel
-    $('#enemy_image').css('-webkit-animation', 'attack-left 0.5s steps(3)');
-    $('#enemy_image').css('animation', 'attack-left 0.5s steps(3)');
+    $('#enemy_image').css({
+      '-webkit-animation' : 'attack-left 0.5s steps(3)',
+      'animation' : 'attack-left 0.5s steps(3)'
+    });
     $('#enemy_image').animate({right: '1250px'}).animate({right: '20px'});
 
    
@@ -125,12 +128,16 @@ $(document).ready(function() {
       $("." + enemyImg.attr("class") + ":last").remove();
 
       //  Player and enemy moves to attack
-      $('#player_image').css('-webkit-animation', 'attack-right 0.5s steps(4)');
-      $('#player_image').css('animation', 'attack-right 0.5s steps(4)');
+      $('#player_image').css({
+        '-webkit-animation' : 'attack-right 0.5s steps(4)',
+        'animation' : 'attack-right 0.5s steps(4)'
+      });
       $('#player_image').animate({left: '600px'}).animate({left: '20px'});
 
-      $('#enemy_image').css('-webkit-animation', 'attack-left 0.5s steps(3)');
-      $('#enemy_image').css('animation', 'attack-left 0.5s steps(3) 1');
+      $('#enemy_image').css({
+        '-webkit-animation' : 'attack-left 0.5s steps(3)',
+        'animation' : 'attack-left 0.5s steps(3)'
+      });
       $('#enemy_image').animate({right: '730px'}).animate({right: '20px'});
 
       appendText(playa.battle(subwayenemy));
@@ -146,6 +153,17 @@ $(document).ready(function() {
   });
 
   $('#unknown_tunnel').click(function(){
+
+    $('#map').hide();
+    $('#content').css('position', 'relative');
+    $('#battle_window').css({
+      'visibility' : 'visible',
+      'height' : '500px',
+      'background-image' : 'url(../images/unknown-bkgd.jpg)',
+      'background-size' : 'cover',
+      'background-repeat' : 'no-repeat',
+      'background-position' : '100% 40%'
+    });
 
     $('#text_window').html($('<p>', {
       class: "dialogue",
@@ -166,12 +184,14 @@ $(document).ready(function() {
 
     $('#map').hide();
     $('#content').css('position', 'relative');
-    $('#battle_window').css('visibility', 'visible');
-    $('#battle_window').css('height', '500px');
-    $('#battle_window').css('background-image', 'url(../images/entrance-bkgd.png)');
-    $('#battle_window').css('background-size', 'cover');
-    $('#battle_window').css('background-repeat', 'no-repeat');
-    $('#battle_window').css('background-position', '100% 80%');
+    $('#battle_window').css({
+      'visibility' : 'visible',
+      'height' : '500px',
+      'background-image' : 'url(../images/entrance-bkgd.png)',
+      'background-size' : 'cover',
+      'background-repeat' : 'no-repeat',
+      'background-position' : '100% 80%'
+    });
 
     $('#text_window').html($('<p>', {
       class: "dialogue",
@@ -192,12 +212,14 @@ $(document).ready(function() {
     
     $('#map').hide();
     $('#content').css('position', 'relative');
-    $('#battle_window').css('visibility', 'visible');
-    $('#battle_window').css('height', '500px');
-    $('#battle_window').css('background-image', 'url(../images/house-bkgd.gif)');
-    $('#battle_window').css('background-size', 'cover');
-    $('#battle_window').css('background-repeat', 'no-repeat');
-    $('#battle_window').css('background-position', '100% 80%');
+    $('#battle_window').css({
+      'visibility' : 'visible',
+      'height' : '500px',
+      'background-image' : 'url(../images/house-bkgd.gif)',
+      'background-size' : 'cover',
+      'background-repeat' : 'no-repeat',
+      'background-position' : '100% 80%'
+    });
 
     $('#text_window').html($('<p>', {
       class: "dialogue",
@@ -217,12 +239,14 @@ $(document).ready(function() {
 
     $('#map').hide();
     $('#content').css('position', 'relative');
-    $('#battle_window').css('visibility', 'visible');
-    $('#battle_window').css('height', '500px');
-    $('#battle_window').css('background-image', 'url(../images/temple-bkgd.png)');
-    $('#battle_window').css('background-size', 'cover');
-    $('#battle_window').css('background-repeat', 'no-repeat');
-    $('#battle_window').css('background-position', '100% 100%');
+    $('#battle_window').css({
+      'visibility' : 'visible',
+      'height' : '500px',
+      'background-image' : 'url(../images/temple-bkgd.png)',
+      'background-size' : 'cover',
+      'background-repeat' : 'no-repeat',
+      'background-position' : '100% 100%'
+    });
 
     $('#text_window').html($('<p>', {
       class: "dialogue",
