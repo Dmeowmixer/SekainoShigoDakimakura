@@ -6078,49 +6078,10 @@ body #content {
         body #content #game_screen #player_window #player_info #_exp {
           display: block; }
         body #content #game_screen #player_window #player_info #_image {
-          margin: 180px auto;
+          margin: 30px auto;
           text-align: center; }
           body #content #game_screen #player_window #player_info #_image img {
             height: 300px; }
-        body #content #game_screen #player_window #player_info #player_equipment #_HEAD {
-          position: absolute;
-          top: 35%;
-          left: 30%; }
-        body #content #game_screen #player_window #player_info #player_equipment #_BODY {
-          background-color: red;
-          height: 10px;
-          width: 10px;
-          position: absolute;
-          top: 65%;
-          left: 49%; }
-        body #content #game_screen #player_window #player_info #player_equipment #_RHAND {
-          background-color: yellow;
-          height: 10px;
-          width: 10px;
-          position: absolute;
-          top: 55%;
-          left: 85%; }
-        body #content #game_screen #player_window #player_info #player_equipment #_LHAND {
-          background-color: green;
-          height: 10px;
-          width: 10px;
-          position: absolute;
-          top: 55%;
-          left: 15%; }
-        body #content #game_screen #player_window #player_info #player_equipment #_LEGS {
-          background-color: pink;
-          height: 10px;
-          width: 10px;
-          position: absolute;
-          top: 85%;
-          left: 49%; }
-        body #content #game_screen #player_window #player_info #player_equipment #_FEET {
-          background-color: blue;
-          height: 10px;
-          width: 10px;
-          position: absolute;
-          top: 95%;
-          left: 49%; }
     body #content #game_screen #inventory_window {
       overflow-y: scroll;
       border: 3px solid #000;
@@ -6188,15 +6149,6 @@ body #content {
           background-image: url(../images/tony.png);
           width: 160px;
           height: 120px; }
-          body #content #game_screen #game_window #battle_window .player_attack #particle {
-            visibility: hidden;
-            position: fixed;
-            left: 58%;
-            background-image: url(../images/slash.svg);
-            -webkit-animation: slash 0.5s steps(3);
-            animation: slash 0.5s steps(3);
-            width: 70px;
-            height: 90px; }
         body #content #game_screen #game_window #battle_window .enemy_attack {
           position: absolute;
           margin-top: 27%;
@@ -6206,7 +6158,21 @@ body #content {
         body #content #game_screen #game_window #battle_window .reBattle {
           position: absolute;
           bottom: 20px;
-          right: 40px;
+          right: 2%;
+          background-color: #000;
+          color: #FFF;
+          text-transform: uppercase;
+          padding: 10px 15px;
+          margin: 5px auto;
+          width: 10%;
+          border: none;
+          border-radius: 5px;
+          box-shadow: 3px 3px #d3d3d3;
+          font-weight: bold; }
+        body #content #game_screen #game_window #battle_window .back {
+          position: absolute;
+          bottom: 20px;
+          right: 15%;
           background-color: #000;
           color: #FFF;
           text-transform: uppercase;
@@ -6255,17 +6221,3 @@ body #content {
 
   100% {
     background-position: 0px; } }
-
-@-webkit-keyframes slash {
-  0% {
-    background-position: 0px; }
-
-  100% {
-    background-position: -261px; } }
-
-@keyframes slash {
-  0% {
-    background-position: 0px; }
-
-  100% {
-    background-position: -261px; } }

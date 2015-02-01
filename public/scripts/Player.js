@@ -47,7 +47,7 @@ paw.Player = (function() {
 
       this.checkExp();
 
-      $('#text_window').append(enemy.name + ' has been defeated');
+      $('#text_window').append('<p>' + enemy.name + ' has been defeated</p>');
       return;
     }
   };

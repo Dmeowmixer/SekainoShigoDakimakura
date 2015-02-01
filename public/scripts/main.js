@@ -59,6 +59,10 @@ $(document).ready(function() {
     $('#content').css('background-image', 'none');
     //Auto scroll to bottom
     $('#text_window').scrollTop($('#text_window').height());
+    window.setInterval(function() {
+      var elem = document.getElementById('text_window');
+      elem.scrollTop = elem.scrollHeight;
+    }, 1000);
 
     // ranson code
     $('#_health').append("hp " + playa.health);
@@ -99,7 +103,6 @@ $(document).ready(function() {
     // how do i run the player method battle??
     appendText(playa.battle(subwayenemy));
 
-
     //Enemy attacks player when entered in subway tunnel
     $('#enemy_image').css('-webkit-animation', 'attack-left 0.5s steps(3)');
     $('#enemy_image').css('animation', 'attack-left 0.5s steps(3)');
@@ -112,14 +115,12 @@ $(document).ready(function() {
       var newPlayerImg = playerImg.clone(true);
 
       playerImg.before(newPlayerImg);
-
       $("." + playerImg.attr("class") + ":last").remove();
 
       var enemyImg = $('#enemy_image');
       var newEnemyImg = enemyImg.clone(true);
 
       enemyImg.before(newEnemyImg);
-
       $("." + enemyImg.attr("class") + ":last").remove();
 
       //  Player and enemy moves to attack
@@ -131,20 +132,19 @@ $(document).ready(function() {
       $('#enemy_image').css('animation', 'attack-left 0.5s steps(3) 1');
       $('#enemy_image').animate({right: '730px'}).animate({right: '20px'});
 
-      $('#particle').css('visibility', 'visible');
-
       appendText(playa.battle(subwayenemy));
       $('#_health').html(playa.health);
       playa.checkExp(playa);
       return;
     });
+
+    $('.back').click(function(){
+      $('#battle_window').css('visibility', 'hidden');
+      $('#map').show();
+    });
   });
 
   $('#unknown_tunnel').click(function(){
-    // window.setInterval(function() {
-    //   var elem = document.getElementById('text_window');
-    //   elem.scrollTop = elem.scrollHeight;
-    // }, 1000);
 
     $('#text_window').html($('<p>', {
       class: "dialogue",
@@ -162,6 +162,16 @@ $(document).ready(function() {
 
 
   $('#subway_entrance').click(function() {
+
+    $('#map').hide();
+    $('#content').css('position', 'relative');
+    $('#battle_window').css('visibility', 'visible');
+    $('#battle_window').css('height', '500px');
+    $('#battle_window').css('background-image', 'url(../images/entrance-bkgd.png)');
+    $('#battle_window').css('background-size', 'cover');
+    $('#battle_window').css('background-repeat', 'no-repeat');
+    $('#battle_window').css('background-position', '100% 80%');
+
     $('#text_window').html($('<p>', {
       class: "dialogue",
       text: "You have reached the subways entrance"
@@ -178,6 +188,16 @@ $(document).ready(function() {
   });
 
   $('#my_house').click(function() {
+    
+    $('#map').hide();
+    $('#content').css('position', 'relative');
+    $('#battle_window').css('visibility', 'visible');
+    $('#battle_window').css('height', '500px');
+    $('#battle_window').css('background-image', 'url(../images/house-bkgd.gif)');
+    $('#battle_window').css('background-size', 'cover');
+    $('#battle_window').css('background-repeat', 'no-repeat');
+    $('#battle_window').css('background-position', '100% 80%');
+
     $('#text_window').html($('<p>', {
       class: "dialogue",
       text: "You somehow have made it home"
@@ -193,6 +213,16 @@ $(document).ready(function() {
   });
 
   $('#temple').click(function() {
+
+    $('#map').hide();
+    $('#content').css('position', 'relative');
+    $('#battle_window').css('visibility', 'visible');
+    $('#battle_window').css('height', '500px');
+    $('#battle_window').css('background-image', 'url(../images/temple-bkgd.png)');
+    $('#battle_window').css('background-size', 'cover');
+    $('#battle_window').css('background-repeat', 'no-repeat');
+    $('#battle_window').css('background-position', '100% 100%');
+
     $('#text_window').html($('<p>', {
       class: "dialogue",
       text: "wha...whAAT ARE THEY DOING TO MY WAIFU!?@$#%"
