@@ -27,18 +27,18 @@ $(document).ready(function() {
     paw.windows.inventory_window.append(new_inventory_item);
 
     new_inventory_item.click(function() {
+
       var itemslot = new_inventory_item.slot;
       var indexofitem = playa.backpack.indexOf(item);
       new_inventory_item.remove();
 
+      // playa.checkEquip(item);
       playa.equipItem(item);
       playa.backpack.splice(indexofitem, 1);
-
       paw.windows.text_window.append($('<p>', {
         class: 'item_name',
         text: item.name + ' was equipped.'
       }));
-
 
       $('#_' + item.slot).html($('<p>', {
         class: 'equip_slots',
@@ -55,6 +55,7 @@ $(document).ready(function() {
 
   //Start Button hides title_screen and show game_screen
   $('.startbutton').click(function() {
+    $('#text_window').html($('<p> You wake up in a unfamiliar place, surrounded by strangers. Your last memory is going to sleep in your parents basement after a night of marathoning DragonBall.  You see your parents in the corner huddled together by a fireplace and question them. You are told there was a nuclear war and was carried here (The Subway Tunnels) by your father, you have been asleep for 3 days. You frantically look around and realize that they have left your beloved Dakimakura (Anime girl body pillow) behind. As a true otaku, your only option is to leave the sanctuary of the tunnels and rescue your waifu (girlfriend). Your parents look at your strangely and wish you the best of luck and say their goodbyes. You are armed with your DragonBallZ shirt and boxers as you set out into the unknown. </p>'));
 
     // player_window();
     var current_health = playa.health;
@@ -75,12 +76,23 @@ $(document).ready(function() {
     $('#_level').append("lvl " + playa.level);
     $('#_exp').append("xp " + playa.exp);
     if (playa.backpack.length === 0) {
-      $('#inventory_window').append('<p>YOU NEED ITAMZ</p>');
+      $('#inventory_window').append('<p>YOU NEED <IT></IT>AMZ</p>');
     }
     else {
       for (var i = 0; i < backpack.length; i++) {
         $('#inventory_window').append(playa.backpack[i]);
+        $('#inventory_window').append($('<button>',{
+          class : deleteButton,
+          text : Delete
+        }));
       }
+      $('button').click(function(item){       
+        var itemfound = backpack.indexOf(item);
+        if (itemfound != -1){
+          item.splice([],1);
+          return;
+        }
+      });
     }
   });
 

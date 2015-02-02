@@ -8,7 +8,7 @@ paw.windows.player_window = {
   lefthand : $('#_LHAND'),
   righthand : $('#_RHAND'),
   legs : $('#_LEGS'),
-  feet : $('#_FEET'),
+  feet : $('#_FEET')
   // strength : $('#_strength'),
   // agility : $('#_agility'),
   // luck : $('#_luck'),

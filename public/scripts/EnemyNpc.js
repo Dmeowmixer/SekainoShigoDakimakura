@@ -25,7 +25,7 @@ paw.bossenemies = {
         Math.floor(Math.random()*150) -paw.Player.agility, //hp
         Math.floor(Math.random()*10),
         Math.floor(Math.random()*10),
-        paw.items.RANDOM_ITEM,
+        paw.Player.getRandomItem,
         5,
         null
       );
@@ -42,7 +42,7 @@ paw.enemies = {
         20,
         1,
         Math.floor(Math.random()*10),
-        paw.items.KiritosSword,
+        paw.Player.getRandomItem,
         1,//-paw.Player.strength;
         null
       );
@@ -84,7 +84,7 @@ paw.enemies = {
         200,
         20,
         20,
-        paw.items.RANDOM_ITEM,
+        paw.Player.getRandomItem,
         20,
         null
       );
@@ -98,7 +98,7 @@ paw.enemies = {
         10,
         1,
         10,
-        paw.items.ChristmasSweater,
+        paw.Player.getRandomItem,
         1,//-paw.Player.strength;
         null
       );
@@ -113,7 +113,7 @@ paw.enemies = {
         10,
         25,
         15,
-        paw.items.RANDOM_ITEM,
+        paw.Player.getRandomItem,
         50,
         null
       );
@@ -127,7 +127,7 @@ paw.enemies = {
         40,
         40,
         40,
-        paw.items.HolyGrail,
+        paw.Player.getRandomItem,
         1,
         null
       );
@@ -141,7 +141,7 @@ paw.enemies = {
       20,
       20,
       20,
-      paw.items.MunchkinsHelmet,
+        paw.Player.getRandomItem,
       6,
       null
       );

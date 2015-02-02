@@ -18,14 +18,6 @@ paw.Item = (function (){
 // package of item classes
 
 paw.items = {
-
-
-  EnergyDrink : (function (){
-    return function ( health ){
-      var h = health || 20;
-      paw.ConsumableItem.call(this, "Health pot", "a potion of health" , h);
-    };
-  })(),
   
   CrescentMoonWand : (function(){
     return function(){

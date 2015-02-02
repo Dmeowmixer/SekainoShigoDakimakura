@@ -18,7 +18,7 @@ paw.Player = (function() {
       FEET: null
     };
     this.backpack = [];
-    this.maxHealth = 1000;
+    this.maxHealth = 100 + this.agility;
     this.isAlive = true;
     var self = this;
   }
@@ -41,9 +41,9 @@ paw.Player = (function() {
       var exp_gain = this.exp + enemy.expreward;
       this.exp += exp_gain;
       $('#_exp').html(this.exp);
-      var item = new enemy.loot();
-      this.backpack.push(item);
-      paw.appendInventoryText(item);
+      // var item = new enemy.loot();
+      this.backpack.push(this.getRandomItem());
+      paw.appendInventoryText(this.getRandomItem());
       if (paw.lastEnemy){
           alert('yaay...you win....DO YOU FEEL BETTER ABOUT YOURSEF NOW? DO YOU? HUH DO YOU?');
           location.reload();
@@ -59,6 +59,7 @@ paw.Player = (function() {
   Player.prototype.checkExp = function() {
     if (this.exp >= this.maxExp) {
       this.level++;
+      this.health = this.maxHealth;
       this.exp = 0;
       $('#_level').html(this.level);
       $('#_exp').html(this.exp);
@@ -87,15 +88,17 @@ paw.Player = (function() {
     var slot = this.equipped;
     if (this.slot === this.equipped[slot]) {
       this.backpack.push(this.equipped[slot]);
+      // $('inventory_window').append('<p>' + this.item.name);
     }
     return;
   };
 
   Player.prototype.equipItem = function(item) {
+    
     var slot = item.slot;
     this.checkEquip();
     this.equipped[slot] = item;
-
+    // this.checkEquip(item);
   };
 
   Player.prototype.getMaxHealth = function() {
@@ -114,12 +117,20 @@ paw.Player = (function() {
   };
 
   Player.prototype.discardItem = function(item) {
-    var itemfound = backpack.indexOf(item);
+    var itemfound = this.backpack.indexOf(item);
     if (itemfound != -1) {
       // is this index of found?
-      item.splice([], 1);
+      this.backpack.splice(itemfound, 1);
       return;
     }
+  };
+
+  Player.prototype.getRandomItem = function(){
+    var allItems = Object.keys(paw.items);
+    var randomItemName = allItems[Math.floor(Math.random()*allItems.length)];
+    var randomItem = paw.items[randomItemName];
+    var newRandomItem = new randomItem();
+    return newRandomItem;
   };
 
   Player.slots = {

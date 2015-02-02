@@ -9,3 +9,19 @@ paw.ConsumableItem = (function (){
   });
   return ConsumableItem;
 })();
+
+paw.consumables = {  
+  EnergyDrink : (function (){
+    return function ( health ){
+      var h = health || 20;
+      paw.ConsumableItem.call(this, "ENERGYYYYYYYDRANK", "IT GIVES YOU WANGS" , h);
+    };
+  })(),
+
+  HealthPotion :(function(){
+    return function ( health ){
+      var h = health || 20;
+      paw.ConsumableItem.call(this, "Health pot", "a potion of health", h);
+    };
+  })()
+};
