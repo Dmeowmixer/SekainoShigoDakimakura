@@ -2,7 +2,7 @@
 $(document).ready(function() {
   // initialize all main things,
 
-  paw.session.player = new paw.Player("Tonyizzle");
+  paw.session.player = new paw.Player("Tonyizzle!!!!!!");
   paw.session.subwaytunnel = new paw.locations.subway_tunnel();
   paw.session.unknowntunnel = new paw.locations.unknown_tunnel();
   paw.session.subwayentrance = new paw.locations.subway_entrance();
