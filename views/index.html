@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    <title>After Death of the World Body Pillow</title>
+  </head>
+  <body>
+    <div id="content">
+      <div id="title_screen">
+        <h1 id="title">Sekai no Shigo Dakimakura (After the Death of the World Body Pillow)</h1>
+        <div class="startbutton">
+          <button class="start" type="button">Start Game</button>
+        </div>
+        <div class="creditsbutton">
+          <button class="credits" type="button">Click This!</button>
+        </div>
+      </div>
+      <div id="game_screen">
+        <div class="row">
+          <div class="medium-4 large-4 columns" id="player_window">
+            <div id="player_info">
+              <div id="_name"></div>
+              <div id="_level"></div>
+              <div id="_health"></div>
+              <div id="_exp"></div>
+              <div id="_image"><img src="../images/Player_sihouette.png"></div>
+              <div id="player_equipment">
+                <div id="_HEAD"></div>
+                <div id="_BODY"></div>
+                <div id="_LHAND"></div>
+                <div id="_RHAND"></div>
+                <div id="_LEGS"></div>
+                <div id="_FEET"></div>
+              </div>
+            </div>
+          </div>
+          <div class="medium-8 large-8 columns" id="game_window">
+            <div id="map"><img class="map" src="../images/map2.svg">
+              <div class="location" id="subway_tunnel"><img src="../images/subway_tunnel.svg"></div>
+              <div class="location" id="unknown_tunnel"><img src="../images/Unknown_tunnel.svg"></div>
+              <div class="location" id="subway_entrance"><img src="../images/subway_entrance.svg"></div>
+              <div class="location" id="my_house"><img src="../images/house.svg"></div>
+              <div class="location" id="temple"><img src="../images/temple.svg"></div>
+              <div class="location" id="shop"></div>
+            </div>
+            <div id="battle_window">
+              <div class="player_attack" id="player_image"></div>
+              <div class="enemy_attack" id="enemy_image"></div>
+              <div id="_actions">
+                <button class="reBattle" type="button">Attack</button>
+                <button class="back" type="button">Map</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-4 large-4 columns" id="inventory_window"></div>
+          <div class="medium-8 large-8 columns" id="text_window"></div>
+        </div>
+      </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+      var paw = {
+       session : {},
+       windows : {}
+      };
+    </script>
+    <script src="/scripts/player_window.js"></script>
+    <script src="/scripts/Item.js"></script>
+    <script src="/scripts/ConsumableItem.js"></script>
+    <script src="/scripts/EquippableItem.js"></script>
+    <script src="/scripts/Player.js"></script>
+    <script src="/scripts/Npc.js"></script>
+    <script src="/scripts/EnemyNpc.js"></script>
+    <script src="/scripts/game_window.js"></script>
+    <script src="/scripts/inventory_window.js"></script>
+    <script src="/scripts/text_window.js"></script>
+    <script src="/scripts/Location.js"></script>
+    <script src="/scripts/Map.js"></script>
+    <script src="/scripts/battle_screen.js"></script>
+    <script src="/scripts/main.js"></script>
+  </body>
+</html>
