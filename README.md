@@ -1,6 +1,6 @@
+WIP
 run npm i (requires node version v0.10.13 to install gulp-sass)
 to run, in root directory type gulp starts on localhost:4000
-
 
 ------------------   Sekai no Shigo Dakimakura  -----------------
     Index
